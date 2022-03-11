@@ -21,3 +21,10 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/dashboard', 'HomeController@dashboard')->name('dashboard');
+
+//! Route khusus untuk Admin
+Route::middleware('role:admin')->resource('kamar', 'KamarController');  
+
+
+//! Route khusus untuk Resepsionis
+// Route::middleware('role:resepsionis')->resource('kartu', 'KartuController');

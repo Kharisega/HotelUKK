@@ -36,7 +36,7 @@
             <div class="list-group list-group-flush">
                 @if(Auth::user()->roles[0]['name'] == 'admin')
                 <a class="list-group-item list-group-item-action list-group-item-dark p-3" href="#!">Dashboard</a>
-                <a class="list-group-item list-group-item-action list-group-item-dark p-3" href="">Data Administrator</a>
+                <a class="list-group-item list-group-item-action list-group-item-dark p-3" href="{{ route('kamar.index') }}">Data Administrator</a>
                 <a class="list-group-item list-group-item-action list-group-item-dark p-3" href="">Data Resepsionis</a>
                 <a class="list-group-item list-group-item-action list-group-item-dark p-3" href="">Data Kamar</a>
                 <a class="list-group-item list-group-item-action list-group-item-dark p-3" href="">Data Fasilitas Kamar</a>
