@@ -24,6 +24,7 @@ Route::get('/dashboard', 'HomeController@dashboard')->name('dashboard');
 
 //! Route khusus untuk Admin
 Route::middleware('role:admin')->resource('kamar', 'KamarController');  
+Route::middleware('role:admin')->resource('fkamar', 'FkamarController');  
 
 
 //! Route khusus untuk Resepsionis
