@@ -40,7 +40,7 @@
                 <a class="list-group-item list-group-item-action list-group-item-dark p-3" href="">Data Resepsionis</a>
                 <a class="list-group-item list-group-item-action list-group-item-dark p-3" href="{{ route('kamar.index') }}">Data Kamar</a>
                 <a class="list-group-item list-group-item-action list-group-item-dark p-3" href="{{ route('fkamar.index') }}">Data Fasilitas Kamar</a>
-                <a class="list-group-item list-group-item-action list-group-item-dark p-3" href="">Data Fasilitas Umum Hotel</a>
+                <a class="list-group-item list-group-item-action list-group-item-dark p-3" href="{{ route('fhotel.index') }}">Data Fasilitas Umum Hotel</a>
                 <a class="list-group-item list-group-item-action list-group-item-dark p-3" href="">Data Reservasi</a>
                 @elseif(Auth::user()->roles[0]['name'] == 'resepsionis')
                 <a class="list-group-item list-group-item-action list-group-item-dark p-3" href="#!">Dashboard</a>
