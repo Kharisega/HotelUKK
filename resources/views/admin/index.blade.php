@@ -5,10 +5,10 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Data Fasilitas Hotel</h2>
+                <h2>Data Administrator</h2>
             </div>
             <div class="pull-right mt-4 mb-4">
-                <a href="{{ route('fhotel.create') }}" class="btn btn-success">Tambah Data</a>
+                <a href="{{ route('admin.create') }}" class="btn btn-success">Tambah Data</a>
             </div>
         </div>
     </div>
@@ -22,22 +22,22 @@
     <table class="table table-bordered">
         <tr>
             <th>No</th>
-            <th>ID Fasilitas Hotel</th>
-            <th>Nama Fasilitas Hotel</th>
-            <th>Gambar</th>
-            <th>Keterangan</th>
+            <th>ID Administrator</th>
+            <th>Username</th>
+            <th>E-mail</th>
+            {{-- <th>Password</th> --}}
             <th>Aksi</th>
         </tr>
-        @foreach ($fhotel as $i => $fhotell)
+        @foreach ($admin as $i => $adminn)
             <tr>
                 <td>{{ ++$i }}</td>
-                <td>{{ $fhotell->id_fasilitas }}</td>
-                <td>{{ $fhotell->nama_fasilitas }}</td>
-                <td><img src="{{url('/fasilitas_hotel/') . '/' . $fhotell->gambar}}" alt="{{ $fhotell->gambar }}"></td>
-                <td>{{ $fhotell->keterangan }}</td>
+                <td>{{ $adminn->model_id }}</td>
+                <td>{{ $adminn->name }}</td>
+                <td>{{ $adminn->email }}</td>
+                {{-- <td>{{ $adminn->password }}</td> --}}
                 <td>
-                    <form action="{{ route('fhotel.destroy', $fhotell->id_fasilitas) }}" method="POST">
-                        <a href="{{ route('fhotel.edit',$fhotell->id_fasilitas) }}" class="btn btn-primary">Edit</a>
+                    <form action="{{ route('admin.destroy', $adminn->model_id) }}" method="POST">
+                        <a href="{{ route('admin.edit',$adminn->model_id) }}" class="btn btn-primary">Edit</a>
 
                         @csrf
                         @method('DELETE')
@@ -50,6 +50,6 @@
             @endforeach
     </table>
 
-    {!! $fhotel->links() !!}
+    {!! $admin->links() !!}
 </div>
 @endsection
