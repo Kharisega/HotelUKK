@@ -83,6 +83,7 @@ class AdminController extends Controller
             ->join('model_has_roles', 'users.id', '=', 'model_has_roles.model_id')
             ->join('roles', 'model_has_roles.role_id', '=', 'roles.id')
             ->where('model_has_roles.model_id', $akun)
+            ->select('users.name', 'users.email', 'model_has_roles.model_id')
             ->get();
         
         // dd($admin);

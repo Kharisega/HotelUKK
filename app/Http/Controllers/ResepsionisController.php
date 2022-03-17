@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Akun;
+use App\User;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ResepsionisController extends Controller
 {
@@ -21,7 +23,7 @@ class ResepsionisController extends Controller
             ->select('users.name', 'users.email', 'model_has_roles.model_id')
             ->paginate(5);
         // dd($resepsionis);
-        return view('resepsionis.index', compact('resepsionis'))
+        return view('resepsionis.index', compact('resepsionis'));
     }
 
     /**
@@ -81,6 +83,7 @@ class ResepsionisController extends Controller
             ->join('model_has_roles', 'users.id', '=', 'model_has_roles.model_id')
             ->join('roles', 'model_has_roles.role_id', '=', 'roles.id')
             ->where('model_has_roles.model_id', $akun)
+            ->select('users.name', 'users.email', 'model_has_roles.model_id')
             ->get();
         
         // dd($admin);
@@ -94,7 +97,7 @@ class ResepsionisController extends Controller
      * @param  \App\Akun  $akun
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Akun $akun)
+    public function update(Request $request)
     {
         $request->validate([
             'name' => ['required', 'string', 'max:255'],

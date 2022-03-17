@@ -5,10 +5,10 @@
 <div class="row">
     <div class="col-lg-12 margin-tb">
         <div class="pull-left">
-            <h2>Edit Data Administrator</h2>
+            <h2>Edit Data Resepsionis</h2>
         </div>
         <div class="pull-right">
-            <a class="btn btn-primary" href="{{ route('admin.index') }}">Kembali</a>
+            <a class="btn btn-primary" href="{{ route('resepsionis.index') }}">Kembali</a>
         </div>
     </div>
 </div>
@@ -24,7 +24,7 @@
     </div>
 @endif
 
-<form action="{{ route('admin.update', $admin[0]->model_id) }}" method="POST" enctype="multipart/form-data">
+<form action="{{ route('resepsionis.update', $resepsionis[0]->model_id) }}" method="POST" enctype="multipart/form-data">
     @csrf
     @method('PUT')
     
@@ -32,14 +32,14 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Username :</strong>
-                <input type="text" name="name" class="form-control" value="{{ $admin[0]->name }}" placeholder="cth. Televisi 4inch">
+                <input type="text" name="name" class="form-control" value="{{ $resepsionis[0]->name }}" placeholder="cth. Televisi 4inch">
             </div>
         </div>
-        <input type="hidden" name="model_id" value="{{ $admin[0]->model_id }}">
+        <input type="hidden" name="model_id" value="{{ $resepsionis[0]->model_id }}">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>E-mail :</strong>
-                <input type="text" name="email" class="form-control" value="{{ $admin[0]->email }}" placeholder="cth. Televisi 4inch">
+                <input type="text" name="email" class="form-control" value="{{ $resepsionis[0]->email }}" placeholder="cth. Televisi 4inch">
             </div>
         </div>
         {{-- <div class="col-xs-12 col-sm-12 col-md-12">
