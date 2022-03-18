@@ -74,4 +74,10 @@ class RegisterController extends Controller
 
         return $user;
     }
+
+    protected function registered() 
+    {
+        $this->guard()->logout();
+        return redirect()->route('login')->with('success', "Akun anda berhasil ter-registrasi, silahkan untuk login ulang!");
+    }
 }

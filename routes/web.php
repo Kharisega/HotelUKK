@@ -20,6 +20,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/tamu', 'TamuController@index')->name('tamu');
 Route::get('/dashboard', 'HomeController@dashboard')->name('dashboard');
 
 //! Route khusus untuk Admin
