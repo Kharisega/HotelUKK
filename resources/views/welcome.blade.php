@@ -90,7 +90,7 @@
           <div class="carousel-caption text-start">
             <h1>Be Yourself</h1>
             <p>There's no one better.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+            <a><a class="btn btn-lg btn-primary" href="{{ route('register') }}">Daftar Sekarang!</a></a>
           </div>
         </div>
       </div>
@@ -101,7 +101,7 @@
           <div class="carousel-caption">
             <h1>We travel not to escape life,</h1>
             <p>But for life not to escape us.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+            {{-- <a><a class="btn btn-lg btn-primary" href="#">Learn more</a></a> --}}
           </div>
         </div>
       </div>
@@ -112,7 +112,7 @@
           <div class="carousel-caption text-end">
             <h1>Only you can change your life.</h1>
             <p>Nobody else can do it for you.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+            {{-- <a><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></a> --}}
           </div>
         </div>
       </div>
@@ -137,25 +137,28 @@
     <!-- Three columns of text below the carousel -->
     <div class="row">
       <div class="col-lg-4">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+        {{-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg> --}}
+        <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="{{ asset('img/ramah.jpg') }}" alt="">
 
         <h2>Ramah</h2>
-        <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
-        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+        <p>Pelayanan yang ramah dari para pegawai kami, membuat anda nyaman untuk selalu mengandalkan kami.</p><br>
+        {{-- <a><a class="btn btn-secondary" href="#">View details &raquo;</a></a> --}}
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+        {{-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg> --}}
+        <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="{{ asset('img/lengkap.jpg') }}" alt="">
 
         <h2>Lengkap</h2>
-        <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
-        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+        <p>Fasilitas yang kami sediakan untuk para tamu juga sangat lengkap, baik fasilitas tiap kamar maupun fasilitas hotel.</p><br>
+        {{-- <a><a class="btn btn-secondary" href="#">View details &raquo;</a></a> --}}
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+        {{-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg> --}}
+        <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="{{ asset('img/terjangkau.jpg') }}" alt="">
 
         <h2>Terjangkau</h2>
-        <p>And lastly this, the third column of representative placeholder content.</p>
-        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+        <p>Kami juga memberikan harga yang terjangkau agar semua kalangan dapat menikmati pelayanan dan fasilitas kami.</p><br>
+        {{-- <a><a class="btn btn-secondary" href="#">View details &raquo;</a></a> --}}
       </div><!-- /.col-lg-4 -->
     </div><!-- /.row -->
 
@@ -166,8 +169,8 @@
 
     <div class="row featurette">
       <div class="col-md-7">
-        <h2 class="featurette-heading">Tentang Kami, <span class="text-muted">Hotel Tacenda</span></h2>
-        <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
+        <h2 class="featurette-heading">Tentang <span class="text-muted">Hotel Tacenda</span></h2>
+        <p class="lead">Hotel Tacenda merupakan salah satu hotel terbaik dan menjadi rekomendasi ketika berlibur. Dengan menyediakan berbagai fasilitas yang dibutuhkan oleh para pengunjung dan juga kami memberikan pelayanan yang terbaik untuk meningkatkan pengalaman pengunjung ketika berlibur. Bermula dari hotel sederhana dengan pesan secara langsung di tempat, hotel kami sekarang membuka pemesanan kamar dengan lebih mudah dan simpel melalui website kami ini</p>
       </div>
       <div class="col-md-5">
         {{-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> --}}
@@ -179,8 +182,8 @@
 
     <div class="row featurette">
       <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading">Tipe kamar yang kami sediakan <span class="text-muted">Tipe Superior</span></h2>
-        <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+        <h2 class="featurette-heading">Tipe Kamar <span class="text-muted"> Superior</span></h2>
+        <p class="lead">Di Kamar tipe Superior kami berikan berbagai fasilitas diantaranya, Kamar berukuran luas 32 m<sup>2</sup>, 1 kamar mandi dengan shower, Coffee Maker beserta beberapa kopi dan gula pilihan, 1 buah Air Conditioner, dan LED TV dengan lebar 32 inch.</p>
       </div>
       <div class="col-md-5 order-md-1">
         {{-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> --}}
@@ -192,8 +195,8 @@
 
     <div class="row featurette">
       <div class="col-md-7">
-        <h2 class="featurette-heading">Tipe kamar yang kami sediakan <span class="text-muted">Tipe Deluxe</span></h2>
-        <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
+        <h2 class="featurette-heading">Tipe Kamar <span class="text-muted">Deluxe</span></h2>
+        <p class="lead">Di Kamar tipe Deluxe kami berikan berbagai fasilitas diantaranya, Kamar berukuran luas 45 m<sup>2</sup>, 1 kamar mandi dengan shower dan Bath Tub, Coffee Maker beserta beberapa kopi dan gula pilihan,1 buah Sofa panjang, 1 buah Air Conditioner, dan LED TV dengan lebar 40 inch.</p>
       </div>
       <div class="col-md-5">
         {{-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> --}}

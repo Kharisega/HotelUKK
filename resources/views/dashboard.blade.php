@@ -7,6 +7,8 @@
     <meta name="author" content="" />
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="icon" href="{{ asset('img/logo t.png') }}" type="image/icon type">
+
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
 

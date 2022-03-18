@@ -43,6 +43,7 @@ class FhotelController extends Controller
             'gambar'=>'required|image|mimes:jpeg,png,jpg,gif,svg|max:1024',
             'keterangan'=>'required',
         ]);
+        
         $namegambar = $request->file('gambar');
         $gambar = $request->file('gambar')->getClientOriginalName();
 
