@@ -21,6 +21,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/tamu', 'TamuController@index')->name('tamu');
+Route::post('/tamu/pesan', 'TamuController@pesan')->name('tamu.pesan');
+Route::post('/tamu/reservasi', 'TamuController@reservasi')->name('tamu.reservasi');
 Route::get('/dashboard', 'HomeController@dashboard')->name('dashboard');
 
 //! Route khusus untuk Admin

@@ -18,12 +18,14 @@
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     {{-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> --}}
     <style>
-        .btn-block{
-          width: 100%;
+        .btn-block {
+            width: 100%;
         }
-        .offset-wae{
-          margin-left: 82.333%;
+
+        .offset-wae {
+            margin-left: 82.333%;
         }
+
         .bd-placeholder-img {
             font-size: 1.125rem;
             text-anchor: middle;
@@ -152,33 +154,40 @@
         <!-- Marketing messaging and featurettes
   ================================================== -->
         <!-- Wrap the rest of the page in another container to center all the content. -->
-
         <div class="container marketing">
-          <div class="row g-2">
-              <div class="col-md">
-                  <div class="form-floating">
-                      <input type="date" class="form-control" id="floatingInputGrid">
-                      <label for="floatingInputGrid">Tanggal Check In</label>
-                  </div>
-              </div>
-              <div class="col-md">
-                  <div class="form-floating">
-                      <input type="date" class="form-control" id="floatingInputGrid">
-                      <label for="floatingInputGrid">Tanggal Check Out</label>
-                  </div>
-              </div>
-              <div class="col-md">
-                  <div class="form-floating">
-                      <input type="number" class="form-control" id="floatingInputGrid">
-                      <label for="floatingInputGrid">Jumlah Kamar</label>
-                  </div>
-              </div>
-              <div class="col-md">
-                  <button type="button" class="btn btn-outline-primary btn-lg btn-block" style="height:58px;">Pesan</button>
-              </div>
-          </div>
-      
-      <hr class="featurette-divider">
+            <form action="{{ route('tamu.pesan') }}" method="POST">
+                @csrf
+                @if ($errors->any())
+                <div class="alert alert-danger">
+                    <strong>Maaf</strong> Data data dibawah masih ada yang kosong!<br><br>
+                </div>
+                @endif
+                <div class="row g-2">
+                    <div class="col-md">
+                        <div class="form-floating">
+                            <input type="date" name="tgl_checkin" class="form-control" id="floatingInputGrid">
+                            <label for="floatingInputGrid">Tanggal Check In</label>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="form-floating">
+                            <input type="date" name="tgl_checkout" class="form-control" id="floatingInputGrid">
+                            <label for="floatingInputGrid">Tanggal Check Out</label>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="form-floating">
+                            <input type="number" name="jumlah_kamar" class="form-control" id="floatingInputGrid">
+                            <label for="floatingInputGrid">Jumlah Kamar</label>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <button type="submit" class="btn btn-outline-primary btn-lg btn-block" style="height:58px;">Pesan</button>
+                    </div>
+                </div>
+            </form>
+
+            <hr class="featurette-divider">
 
             <!-- Three columns of text below the carousel -->
             <div class="row">
@@ -213,55 +222,55 @@
 
             <hr class="featurette-divider">
 
-        <div class="row featurette">
-            <div class="col-md-7">
-                <h2 class="featurette-heading">Tentang <span class="text-muted">Hotel Tacenda</span></h2>
-                <p class="lead">Hotel Tacenda merupakan salah satu hotel terbaik dan menjadi rekomendasi ketika berlibur. Dengan menyediakan berbagai fasilitas yang dibutuhkan oleh para pengunjung dan juga kami memberikan pelayanan yang terbaik untuk meningkatkan pengalaman pengunjung ketika berlibur. Bermula dari hotel sederhana dengan pesan secara langsung di tempat, hotel kami sekarang membuka pemesanan kamar dengan lebih mudah dan simpel melalui website kami ini</p>
+            <div class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading">Tentang <span class="text-muted">Hotel Tacenda</span></h2>
+                    <p class="lead">Hotel Tacenda merupakan salah satu hotel terbaik dan menjadi rekomendasi ketika berlibur. Dengan menyediakan berbagai fasilitas yang dibutuhkan oleh para pengunjung dan juga kami memberikan pelayanan yang terbaik untuk meningkatkan pengalaman pengunjung ketika berlibur. Bermula dari hotel sederhana dengan pesan secara langsung di tempat, hotel kami sekarang membuka pemesanan kamar dengan lebih mudah dan simpel melalui website kami ini</p>
+                </div>
+                <div class="col-md-5">
+                    {{-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> --}}
+                    <img class="bd-placeholder-img" width="100%" height="100%" src="{{ asset('img/ttgkami.jpg') }}" alt="">
+                </div>
+                <div class="col-md-4">
+                    <a><a class="btn btn-secondary" href="#">Lihat Selengkapnya &raquo;</a></a>
+                </div>
             </div>
-            <div class="col-md-5">
-                {{-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> --}}
-                <img class="bd-placeholder-img" width="100%" height="100%" src="{{ asset('img/ttgkami.jpg') }}" alt="">
-            </div>
-            <div class="col-md-4">
-              <a><a class="btn btn-secondary" href="#">Lihat Selengkapnya &raquo;</a></a>
-            </div>
-        </div>
 
-        <hr class="featurette-divider">
+            <hr class="featurette-divider">
 
-        <div class="row featurette">
-            <div class="col-md-7 order-md-2">
-                <h2 class="featurette-heading">Tipe Kamar <span class="text-muted"> Superior</span></h2>
-                <p class="lead">Di Kamar tipe Superior kami berikan berbagai fasilitas diantaranya, Kamar berukuran luas 32 m<sup>2</sup>, 1 kamar mandi dengan shower, Coffee Maker beserta beberapa kopi dan gula pilihan, 1 buah Air Conditioner, dan LED TV dengan lebar 32 inch.</p>
+            <div class="row featurette">
+                <div class="col-md-7 order-md-2">
+                    <h2 class="featurette-heading">Tipe Kamar <span class="text-muted"> Superior</span></h2>
+                    <p class="lead">Di Kamar tipe Superior kami berikan berbagai fasilitas diantaranya, Kamar berukuran luas 32 m<sup>2</sup>, 1 kamar mandi dengan shower, Coffee Maker beserta beberapa kopi dan gula pilihan, 1 buah Air Conditioner, dan LED TV dengan lebar 32 inch.</p>
+                </div>
+                <div class="col-md-5 order-md-1">
+                    {{-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> --}}
+                    <img class="bd-placeholder-img" width="100%" height="100%" src="{{ asset('img/superior.jpg') }}" alt="">
+                </div>
+                <div class="col-md-4 order-md-2 offset-wae">
+                    <a><a class="btn btn-secondary" href="#">Lihat Selengkapnya &raquo;</a></a>
+                </div>
             </div>
-            <div class="col-md-5 order-md-1">
-                {{-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> --}}
-                <img class="bd-placeholder-img" width="100%" height="100%" src="{{ asset('img/superior.jpg') }}" alt="">
-            </div>
-            <div class="col-md-4 order-md-2 offset-wae">
-              <a><a class="btn btn-secondary" href="#">Lihat Selengkapnya &raquo;</a></a>
-            </div>
-        </div>
 
-        <hr class="featurette-divider">
+            <hr class="featurette-divider">
 
-        <div class="row featurette">
-            <div class="col-md-7">
-                <h2 class="featurette-heading">Tipe Kamar <span class="text-muted">Deluxe</span></h2>
-                <p class="lead">Di Kamar tipe Deluxe kami berikan berbagai fasilitas diantaranya, Kamar berukuran luas 45 m<sup>2</sup>, 1 kamar mandi dengan shower dan Bath Tub, Coffee Maker beserta beberapa kopi dan gula pilihan,1 buah Sofa panjang, 1 buah Air Conditioner, dan LED TV dengan lebar 40 inch.</p>
+            <div class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading">Tipe Kamar <span class="text-muted">Deluxe</span></h2>
+                    <p class="lead">Di Kamar tipe Deluxe kami berikan berbagai fasilitas diantaranya, Kamar berukuran luas 45 m<sup>2</sup>, 1 kamar mandi dengan shower dan Bath Tub, Coffee Maker beserta beberapa kopi dan gula pilihan,1 buah Sofa panjang, 1 buah Air Conditioner, dan LED TV dengan lebar 40 inch.</p>
+                </div>
+                <div class="col-md-5">
+                    {{-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> --}}
+                    <img class="bd-placeholder-img" width="100%" height="100%" src="{{ asset('img/deluxe.jpg') }}" alt="">
+                </div>
+                <div class="col-md-4">
+                    <a><a class="btn btn-secondary" href="#">Lihat Selengkapnya &raquo;</a></a>
+                </div>
             </div>
-            <div class="col-md-5">
-                {{-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> --}}
-                <img class="bd-placeholder-img" width="100%" height="100%" src="{{ asset('img/deluxe.jpg') }}" alt="">
-            </div>
-            <div class="col-md-4">
-              <a><a class="btn btn-secondary" href="#">Lihat Selengkapnya &raquo;</a></a>
-            </div>
-        </div>
 
-        <hr class="featurette-divider">
+            <hr class="featurette-divider">
 
-        <!-- /END THE FEATURETTES -->
+            <!-- /END THE FEATURETTES -->
 
         </div><!-- /.container -->
 

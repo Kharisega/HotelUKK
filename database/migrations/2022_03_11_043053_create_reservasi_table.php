@@ -15,8 +15,8 @@ class CreateReservasiTable extends Migration
     {
         Schema::create('reservasi', function (Blueprint $table) {
             $table->id('id_reservasi');
-            $table->date('tgl_cekin');
-            $table->date('tgl_cekout');
+            $table->date('tgl_checkin');
+            $table->date('tgl_checkout');
             $table->integer('jumlah_kamar');
             $table->string('nama_pemesan');
             $table->string('nama_tamu');
