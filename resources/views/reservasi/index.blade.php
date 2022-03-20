@@ -11,14 +11,24 @@
         <br><br>
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Cari Nama Tamu / Nama Pemesan ...">
-                <datalist id="datalistOptions">
-                    <option value="San Francisco">
-                    <option value="New York">
-                    <option value="Seattle">
-                    <option value="Los Angeles">
-                    <option value="Chicago">
-                </datalist>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-floating">
+                            <input type="text" name="nama_tamu" class="form-control" id="nama_tamu">
+                            <label for="floatingInputGrid">Cari Nama Tamu / Nama Pemesan</label>
+                        </div>
+                        {{-- <input type="text" class="form-control" name="cari" id="cari" placeholder="Cari Nama Pemesan / Nama Tamu" required> --}}
+                    </div>
+                    <div class="col">
+                        <button type="submit" class="btn btn-outline-primary fs-5" style="width: 100px; height: 58px;">Cari</button>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating">
+                            <input type="date" name="tgl_checkin" class="form-control" id="tgl_checkin">
+                            <label for="floatingInputGrid">Tanggal Check In</label>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

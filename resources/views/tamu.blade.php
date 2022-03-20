@@ -48,7 +48,7 @@
     <link href="{{ asset('css/carousel.css') }}" rel="stylesheet">
 </head>
 <body>
-    @include('sweetalert::alert')
+@include('sweetalert::alert')
     <header>
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
             <div class="container-fluid">
