@@ -34,4 +34,4 @@ Route::middleware('role:admin')->resource('resepsionis', 'ResepsionisController'
 
 
 //! Route khusus untuk Resepsionis
-// Route::middleware('role:resepsionis')->resource('kartu', 'KartuController');
+Route::middleware('role:resepsionis')->resource('reservasi', 'ReservasiController');

@@ -24,6 +24,7 @@
 
         .offset-wae {
             margin-left: 82.333%;
+            width: 18%;
         }
 
         .bd-placeholder-img {
@@ -47,7 +48,7 @@
     <link href="{{ asset('css/carousel.css') }}" rel="stylesheet">
 </head>
 <body>
-
+    @include('sweetalert::alert')
     <header>
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
             <div class="container-fluid">
@@ -247,7 +248,7 @@
                     {{-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> --}}
                     <img class="bd-placeholder-img" width="100%" height="100%" src="{{ asset('img/superior.jpg') }}" alt="">
                 </div>
-                <div class="col-md-4 order-md-2 offset-wae">
+                <div class="col-md-2 order-md-2 offset-wae">
                     <a><a class="btn btn-secondary" href="#">Lihat Selengkapnya &raquo;</a></a>
                 </div>
             </div>

@@ -46,7 +46,7 @@
                 <a class="list-group-item list-group-item-action list-group-item-dark p-3" href="">Data Reservasi</a>
                 @elseif(Auth::user()->roles[0]['name'] == 'resepsionis')
                 <a class="list-group-item list-group-item-action list-group-item-dark p-3" href="#!">Dashboard</a>
-                <a class="list-group-item list-group-item-action list-group-item-dark p-3" href="#!">Data Reservasi</a>
+                <a class="list-group-item list-group-item-action list-group-item-dark p-3" href="{{ route('reservasi.index') }}">Data Reservasi</a>
                 @endif
             </div>
         </div>

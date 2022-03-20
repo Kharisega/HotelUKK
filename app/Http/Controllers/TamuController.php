@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Reservasi;
+// use Alert;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class TamuController extends Controller
 {
@@ -36,8 +38,20 @@ class TamuController extends Controller
             'tamu'=>'required',
             'tipe_kamar'=>'required',
         ]);
+        
+        Reservasi::create([
+            'tgl_checkin'=> $request->tgl_checkin,
+            'tgl_checkout'=> $request->tgl_checkout,
+            'jumlah_kamar'=> $request->jumlah_kamar,
+            'nama_pemesan'=> $request->pemesan,
+            'nama_tamu'=> $request->tamu,
+            'tipe_kamar'=> $request->tipe_kamar,
+            'notelp_tamu'=> $request->notelp,
+            'email'=> $request->email,
+        ]);
 
-
-
+        // Alert::success('Sukses', 'Pemesanan Kamar anda sudah berhasil diproses!');
+        Alert::toast('Pemesanan kamar sudah berhasil!', 'success');
+        return redirect()->route('tamu');
     }
 }

@@ -105,9 +105,9 @@
         <br>
         <div class="container marketing">
             <div class="display-3">Pemesanan Kamar</div><br>
+
             <form action="{{ route('tamu.reservasi') }}" id="myForm" method="POST" DefaultButton="pesan">
                 @csrf
-
                 <div class="row g-2">
                     <div class="col-md">
                         <div class="form-floating">
