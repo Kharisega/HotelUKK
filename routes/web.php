@@ -35,3 +35,4 @@ Route::middleware('role:admin')->resource('resepsionis', 'ResepsionisController'
 
 //! Route khusus untuk Resepsionis
 Route::middleware('role:resepsionis')->resource('reservasi', 'ReservasiController');
+Route::middleware('role:resepsionis')->post('reservasi/cari', 'ReservasiController@cari')->name('reservasi.cari');  

@@ -3,10 +3,21 @@
 namespace App\Http\Controllers;
 
 use App\Reservasi;
+use DB;
 use Illuminate\Http\Request;
 
 class ReservasiController extends Controller
 {
+    public function cari(Request $request)
+    {
+        $reservasi = DB::table('reservasi')
+            ->where('nama_tamu', $request->nama_tamu)
+            ->orWhere('nama_pemesan', $request->nama_tamu)
+            ->paginate(10);
+
+        return view('reservasi.index', compact('reservasi'));
+    }
+
     /**
      * Display a listing of the resource.
      *

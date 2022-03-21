@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Data Reservasi Hotel Tacenda</h2>
+                <h2>Data Reservasi Hotel Tacenda</h2><br>
             </div>
         </div>
         <br><br>
@@ -13,6 +13,8 @@
             <div class="pull-left">
                 <div class="row">
                     <div class="col">
+                    <form action="{{ route('reservasi.cari') }}" method="POST">
+                    @csrf
                         <div class="form-floating">
                             <input type="text" name="nama_tamu" class="form-control" id="nama_tamu">
                             <label for="floatingInputGrid">Cari Nama Tamu / Nama Pemesan</label>
@@ -20,6 +22,7 @@
                         {{-- <input type="text" class="form-control" name="cari" id="cari" placeholder="Cari Nama Pemesan / Nama Tamu" required> --}}
                     </div>
                     <div class="col">
+                        <a href="{{ route('reservasi.index') }}" class="btn btn-outline-primary fs-5" style="padding-top:12px;width: 100px; height: 58px;">Semua</a>
                         <button type="submit" class="btn btn-outline-primary fs-5" style="width: 100px; height: 58px;">Cari</button>
                     </div>
                     <div class="col">
@@ -28,6 +31,7 @@
                             <label for="floatingInputGrid">Tanggal Check In</label>
                         </div>
                     </div>
+                    </form>
                 </div>
             </div>
         </div>

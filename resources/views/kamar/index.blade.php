@@ -20,7 +20,7 @@
     @endif
 
     <table class="table table-bordered">
-        <tr>
+        <tr>    
             <th>No</th>
             <th>ID Kamar</th>
             <th>Nama Kamar</th>

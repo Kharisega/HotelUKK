@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -160,7 +160,12 @@
                 @csrf
                 @if ($errors->any())
                 <div class="alert alert-danger">
-                    <strong>Maaf</strong> Data data dibawah masih ada yang kosong!<br><br>
+                    <strong>Maaf</strong> Data yang anda inputkan bermasalah.<br><br>
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
                 </div>
                 @endif
                 <div class="row g-2">

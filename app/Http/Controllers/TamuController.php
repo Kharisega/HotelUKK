@@ -18,8 +18,8 @@ class TamuController extends Controller
     {
         // dd($request);
         $request->validate([
-            'tgl_checkin'=>'required',
-            'tgl_checkout'=>'required',
+            'tgl_checkin'=>'required|date|after_or_equal:today',
+            'tgl_checkout'=>'required|date|after:tgl_checkin',
             'jumlah_kamar'=>'required',
         ]);
         return view('tamu.reservasi', compact('request'));
