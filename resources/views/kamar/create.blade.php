@@ -24,16 +24,10 @@
     </div>
 @endif
 
-<form action="{{ route('kamar.store') }}" method="POST">
+<form action="{{ route('kamar.store') }}" method="POST" enctype="multipart/form-data">
     @csrf
 
      <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Nama Kamar :</strong>
-                <input type="text" name="nama_kamar" class="form-control" placeholder="cth. Kamar Melati">
-            </div>
-        </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Tipe Kamar :</strong>
@@ -46,14 +40,14 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Keterangan :</strong>
-                <input type="text" name="keterangan" class="form-control" placeholder="cth. Keadaan Normal">
+                <strong>Jumlah Kamar yang tersedia :</strong>
+                <input type="number" name="jumlah_kamar" class="form-control">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Status :</strong>
-                <input type="text" name="status" class="form-control" placeholder="cth. Kosong">
+                <strong>Gambar :</strong>
+                <input type="file" name="gambar" id="gambar" class="form-control-file">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">

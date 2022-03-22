@@ -23,20 +23,18 @@
         <tr>    
             <th>No</th>
             <th>ID Kamar</th>
-            <th>Nama Kamar</th>
             <th>Tipe Kamar</th>
-            <th>Keterangan</th>
-            <th>Status</th>
+            <th>Jumlah Kamar</th>
+            <th>Gambar</th>
             <th>Aksi</th>
         </tr>
         @foreach ($kamar as $i => $kamarr)
             <tr>
                 <td>{{ ++$i }}</td>
                 <td>{{ $kamarr->id_kamar }}</td>
-                <td>{{ $kamarr->nama_kamar }}</td>
                 <td>{{ $kamarr->tipe_kamar }}</td>
-                <td>{{ $kamarr->keterangan }}</td>
-                <td>{{ $kamarr->status }}</td>
+                <td>{{ $kamarr->jumlah_kamar }}</td>
+                <td>{{ $kamarr->gambar }}</td>
                 <td>
                     <form action="{{ route('kamar.destroy', $kamarr->id_kamar) }}" method="POST">
                         <a href="{{ route('kamar.edit',$kamarr->id_kamar) }}" class="btn btn-primary">Edit</a>

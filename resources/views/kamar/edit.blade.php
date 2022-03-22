@@ -30,12 +30,6 @@
 
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Nama Kamar :</strong>
-                <input type="text" name="nama_kamar" class="form-control" value="{{ $kamar->nama_kamar}}" placeholder="cth. Kamar Melati">
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
             <strong>Tipe Kamar :</strong>
             <select name="tipe_kamar" class="form-control" id="jk">
                 <option selected class="form-select" aria-label="Disabled select example" disabled>- Pilih Salah Satu -</option>
@@ -45,14 +39,14 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Keterangan :</strong>
-                <input type="text" name="keterangan" class="form-control" value="{{ $kamar->keterangan}}" placeholder="cth. Keadaan Normal">
+                <strong>Jumlah Kamar yang tersedia :</strong>
+                <input type="number" name="jumlah_kamar" class="form-control" value="{{ $kamar->jumlah_kamar}}" placeholder="cth. Keadaan Normal">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Status :</strong>
-                <input type="text" name="status" class="form-control" value="{{ $kamar->status}}" placeholder="cth. Kosong">
+                <strong>Gambar :</strong>
+                <input type="file" name="gambar" class="form-control-file">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Kamar;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Image;
 
 class KamarController extends Controller
 {
@@ -38,11 +39,24 @@ class KamarController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'nama_kamar'=>'required',
-            'keterangan'=>'required',
-            'status'=>'required',
+            'tipe_kamar'=>'required',
+            'jumlah_kamar'=>'required',
+            'gambar'=>'required|image|mimes:jpeg,png,jpg,gif,svg|max:1024',
         ]);
-        Kamar::create($request->all());
+
+        $namegambar = $request->file('gambar');
+        $gambar = $request->file('gambar')->getClientOriginalName();
+
+        $thumbgambar = Image::make($namegambar->getRealPath())->resize(85, 85);
+        $thumbPath = public_path() . '/fasilitas_hotel/' . $gambar;
+        $thumbgambar = Image::make($thumbgambar)->save($thumbPath);
+
+        Kamar::create([
+            'tipe_kamar' => $request['tipe_kamar'],
+            'jumlah_kamar' => $request['jumlah_kamar'],
+            'gambar' => $gambar,
+        ]);
+
         return redirect()->route('kamar.index')->with('success', "Data Kamar Berhasil ditambahkan");
     }
 
@@ -82,10 +96,27 @@ class KamarController extends Controller
     {
         // dd($request);
         $request->validate([
-            'nama_kamar'=>'required',
-            'keterangan'=>'required',
-            'status'=>'required',
+            'tipe_kamar'=>'required',
+            'jumlah_kamar'=>'required',
+            // 'gambar'=>'required|image|mimes:jpeg,png,jpg,gif,svg|max:1024',
         ]);
+
+        if ($request->gambar != '') {
+            $namegambar = $request->file('gambar');
+            $gambar = $request->file('gambar')->getClientOriginalName();
+    
+            $thumbgambar = Image::make($namegambar->getRealPath())->resize(85, 85);
+            $thumbPath = public_path() . '/fasilitas_hotel/' . $gambar;
+            $thumbgambar = Image::make($thumbgambar)->save($thumbPath);
+
+            $kamar->update([
+                'tipe_kamar'=>$request['tipe_kamar'],
+                'jumlah_kamar'=>$request['jumlah_kamar'],
+                'gambar'=>$gambar,
+            ]);
+            return redirect()->route('kamar.index')->with('success', "Data Kamar berhasil diubah");
+        }
+
         $kamar->update($request->all());
         return redirect()->route('kamar.index')->with('success', "Data Kamar berhasil diubah");
     }
