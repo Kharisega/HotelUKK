@@ -17,6 +17,7 @@ class CreateFasilitaskmrTable extends Migration
             $table->id('id_fasilitas');
             $table->string('nama_fasilitas');
             $table->string('tipe_kamar');
+            $table->string('gambar');
             $table->timestamps();
         });
     }

@@ -25,6 +25,11 @@ Route::post('/tamu/pesan', 'TamuController@pesan')->name('tamu.pesan');
 Route::post('/tamu/reservasi', 'TamuController@reservasi')->name('tamu.reservasi');
 Route::get('/dashboard', 'HomeController@dashboard')->name('dashboard');
 
+//! Route untuk Tamu
+Route::get('/tamu/hotel', 'LihatController@hotel')->name('tamu.hotel');
+Route::get('/tamu/superior', 'LihatController@superior')->name('tamu.superior');
+Route::get('/tamu/deluxe', 'LihatController@deluxe')->name('tamu.deluxe');
+
 //! Route khusus untuk Admin
 Route::middleware('role:admin')->resource('kamar', 'KamarController');  
 Route::middleware('role:admin')->resource('fkamar', 'FkamarController');  

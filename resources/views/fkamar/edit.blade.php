@@ -43,6 +43,12 @@
                 <option value="Deluxe" @if($fkamar->tipe_kamar == 'Deluxe') selected @endif>Deluxe</option>
             </select>
         </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <label for="gambar">Gambar / Foto :</label>
+                <input type="file" name="gambar" value="{{ old('gambar', $fhotel->gambar) }}" class="form-control" id="gambar">
+            </div>
+        </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                 <button type="submit" class="btn btn-primary">Edit</button>
         </div>
