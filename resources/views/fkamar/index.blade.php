@@ -34,7 +34,7 @@
                 <td>{{ $fkamarr->id_fasilitas }}</td>
                 <td>{{ $fkamarr->nama_fasilitas }}</td>
                 <td>{{ $fkamarr->tipe_kamar }}</td>
-                <td><img src="{{url('/fasilitas_kamar/') . '/' . $fkamarr->gambar}}" alt="{{ $fkamarr->gambar }}"></td>
+                <td><img src="{{url('/fasilitas_kamarkcl/') . '/' . $fkamarr->gambar}}" alt="{{ $fkamarr->gambar }}"></td>
                 <td>
                     <form action="{{ route('fkamar.destroy', $fkamarr->id_fasilitas) }}" method="POST">
                         <a href="{{ route('fkamar.edit',$fkamarr->id_fasilitas) }}" class="btn btn-primary">Edit</a>

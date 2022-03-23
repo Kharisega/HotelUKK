@@ -48,8 +48,12 @@ class FhotelController extends Controller
         $gambar = $request->file('gambar')->getClientOriginalName();
 
         $thumbgambar = Image::make($namegambar->getRealPath())->resize(85, 85);
-        $thumbPath = public_path() . '/fasilitas_hotel/' . $gambar;
+        $thumbPath = public_path() . '/fasilitas_hotelkcl/' . $gambar;
         $thumbgambar = Image::make($thumbgambar)->save($thumbPath);
+
+        $oriGambar = Image::make($namegambar->getRealPath());
+        $oriPath = public_path() . '/fasilitas_hotel/' . $gambar;
+        $oriImage = Image::make($oriGambar)->save($oriPath);
 
         Fhotel::create([
             'nama_fasilitas' => $request['nama_fasilitas'],
