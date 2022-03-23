@@ -46,8 +46,12 @@ class FkamarController extends Controller
         $gambar = $request->file('gambar')->getClientOriginalName();
 
         $thumbgambar = Image::make($namegambar->getRealPath())->resize(85, 85);
-        $thumbPath = public_path() . '/fasilitas_kamar/' . $gambar;
+        $thumbPath = '/fasilitas_kamarkcl/' . $gambar;
         $thumbgambar = Image::make($thumbgambar)->save($thumbPath);
+
+        $oriGambar = Image::make($namegambar->getRealPath());
+        $oriPath = public_path() . '/fasilitas_kamar/' . $gambar;
+        $oriImage = Image::make($oriGambar)->save($oriPath);
 
         Fkamar::create([
             'nama_fasilitas' => $request['nama_fasilitas'],

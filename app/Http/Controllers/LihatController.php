@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Fhotel;
+use App\Fkamar;
 use Illuminate\Http\Request;
 
 class LihatController extends Controller
@@ -15,11 +16,13 @@ class LihatController extends Controller
 
     public function superior()
     {
-        return view('fasilitas.superior');
+        $kamar = Fkamar::where('tipe_kamar', 'superior');
+        return view('fasilitas.superior', compact('kamar'));
     }
 
     public function deluxe()
     {
-        return view('fasilitas.deluxe');
+        $kamar = Fkamar::where('tipe_kamar', 'deluxe');
+        return view('fasilitas.deluxe', compact('kamar'));
     }
 }

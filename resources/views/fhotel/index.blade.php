@@ -33,7 +33,7 @@
                 <td>{{ ++$i }}</td>
                 <td>{{ $fhotell->id_fasilitas }}</td>
                 <td>{{ $fhotell->nama_fasilitas }}</td>
-                <td><img src="{{url('/fasilitas_hotel/') . '/' . $fhotell->gambar}}" alt="{{ $fhotell->gambar }}"></td>
+                <td><img src="{{url('/fasilitas_hotelkcl/') . '/' . $fhotell->gambar}}" alt="{{ $fhotell->gambar }}"></td>
                 <td>{{ $fhotell->keterangan }}</td>
                 <td>
                     <form action="{{ route('fhotel.destroy', $fhotell->id_fasilitas) }}" method="POST">
