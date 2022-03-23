@@ -24,7 +24,7 @@
     </div>
 @endif
 
-<form action="{{ route('fkamar.store') }}" method="POST">
+<form action="{{ route('fkamar.store') }}" method="POST" enctype="multipart/form-data">
     @csrf
 
      <div class="row">
@@ -42,6 +42,12 @@
                     <option value="Superior">Superior</option>
                     <option value="Deluxe">Deluxe</option>
                 </select>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <label for="gambar">Gambar / Foto :</label>
+                <input type="file" name="gambar" id="gambar" class="form-control-file">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">

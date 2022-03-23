@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Fkamar;
+use Image;
 use Illuminate\Http\Request;
 
 class FkamarController extends Controller
@@ -38,8 +39,21 @@ class FkamarController extends Controller
     {
         $request->validate([
             'nama_fasilitas'=>'required',
+            'gambar'=>'required|image|mimes:jpeg,png,jpg,gif,svg|max:1024',
         ]);
-        Fkamar::create($request->all());
+
+        $namegambar = $request->file('gambar');
+        $gambar = $request->file('gambar')->getClientOriginalName();
+
+        $thumbgambar = Image::make($namegambar->getRealPath())->resize(85, 85);
+        $thumbPath = public_path() . '/fasilitas_kamar/' . $gambar;
+        $thumbgambar = Image::make($thumbgambar)->save($thumbPath);
+
+        Fkamar::create([
+            'nama_fasilitas' => $request['nama_fasilitas'],
+            'tipe_kamar' => $request['tipe_kamar'],
+            'gambar' => $gambar,
+        ]);
         return redirect()->route('fkamar.index')->with('success', "Data Fasilitas Kamar Berhasil ditambahkan");
     }
 
