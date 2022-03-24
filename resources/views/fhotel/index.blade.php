@@ -14,9 +14,9 @@
     </div>
 
     @if ($message = Session::get('success'))
-        <div class="alert alert-success">
-            <p>{{ $message }}</p>
-        </div>
+    <div class="alert alert-success">
+        <p>{{ $message }}</p>
+    </div>
     @endif
 
     <table class="table table-bordered">
@@ -29,25 +29,25 @@
             <th>Aksi</th>
         </tr>
         @foreach ($fhotel as $i => $fhotell)
-            <tr>
-                <td>{{ ++$i }}</td>
-                <td>{{ $fhotell->id_fasilitas }}</td>
-                <td>{{ $fhotell->nama_fasilitas }}</td>
-                <td><img src="{{url('/fasilitas_hotelkcl/') . '/' . $fhotell->gambar}}" alt="{{ $fhotell->gambar }}"></td>
-                <td>{{ $fhotell->keterangan }}</td>
-                <td>
-                    <form action="{{ route('fhotel.destroy', $fhotell->id_fasilitas) }}" method="POST">
-                        <a href="{{ route('fhotel.edit',$fhotell->id_fasilitas) }}" class="btn btn-primary">Edit</a>
+        <tr>
+            <td>{{ ++$i }}</td>
+            <td>{{ $fhotell->id_fasilitas }}</td>
+            <td>{{ $fhotell->nama_fasilitas }}</td>
+            <td><img src="{{url('/fasilitas_hotelkcl/') . '/' . $fhotell->gambar}}" alt="{{ $fhotell->gambar }}"></td>
+            <td>{{ $fhotell->keterangan }}</td>
+            <td>
+                <form action="{{ route('fhotel.destroy', $fhotell->id_fasilitas) }}" method="POST">
+                    <a href="{{ route('fhotel.edit',$fhotell->id_fasilitas) }}" class="btn btn-primary">Edit</a>
 
-                        @csrf
-                        @method('DELETE')
+                    @csrf
+                    @method('DELETE')
 
-                        <button type="submit" class="btn btn-danger">Hapus</button>
+                    <button type="submit" class="btn btn-danger">Hapus</button>
 
-                    </form>
-                </td>
-            </tr>
-            @endforeach
+                </form>
+            </td>
+        </tr>
+        @endforeach
     </table>
 
     {!! $fhotel->links() !!}

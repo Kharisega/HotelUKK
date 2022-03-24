@@ -14,13 +14,13 @@
     </div>
 
     @if ($message = Session::get('success'))
-        <div class="alert alert-success">
-            <p>{{ $message }}</p>
-        </div>
+    <div class="alert alert-success">
+        <p>{{ $message }}</p>
+    </div>
     @endif
 
     <table class="table table-bordered">
-        <tr>    
+        <tr>
             <th>No</th>
             <th>ID Kamar</th>
             <th>Tipe Kamar</th>
@@ -29,25 +29,25 @@
             <th>Aksi</th>
         </tr>
         @foreach ($kamar as $i => $kamarr)
-            <tr>
-                <td>{{ ++$i }}</td>
-                <td>{{ $kamarr->id_kamar }}</td>
-                <td>{{ $kamarr->tipe_kamar }}</td>
-                <td>{{ $kamarr->jumlah_kamar }}</td>
-                <td>{{ $kamarr->gambar }}</td>
-                <td>
-                    <form action="{{ route('kamar.destroy', $kamarr->id_kamar) }}" method="POST">
-                        <a href="{{ route('kamar.edit',$kamarr->id_kamar) }}" class="btn btn-primary">Edit</a>
+        <tr>
+            <td>{{ ++$i }}</td>
+            <td>{{ $kamarr->id_kamar }}</td>
+            <td>{{ $kamarr->tipe_kamar }}</td>
+            <td>{{ $kamarr->jumlah_kamar }}</td>
+            <td>{{ $kamarr->gambar }}</td>
+            <td>
+                <form action="{{ route('kamar.destroy', $kamarr->id_kamar) }}" method="POST">
+                    <a href="{{ route('kamar.edit',$kamarr->id_kamar) }}" class="btn btn-primary">Edit</a>
 
-                        @csrf
-                        @method('DELETE')
+                    @csrf
+                    @method('DELETE')
 
-                        <button type="submit" class="btn btn-danger">Hapus</button>
+                    <button type="submit" class="btn btn-danger">Hapus</button>
 
-                    </form>
-                </td>
-            </tr>
-            @endforeach
+                </form>
+            </td>
+        </tr>
+        @endforeach
     </table>
 
     {!! $kamar->links() !!}

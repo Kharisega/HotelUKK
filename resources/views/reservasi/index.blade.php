@@ -21,9 +21,9 @@
                                 <a href="{{ route('reservasi.index') }}" class="btn btn-outline-primary fs-5" style="padding-top:12px;width: 100px; height: 58px;">Semua</a>
                                 <button type="submit" class="btn btn-outline-primary fs-5" style="width: 100px; height: 58px;">Cari</button>
                             </div>
-                        
+
                         </form>
-                            {{-- <input type="text" class="form-control" name="cari" id="cari" placeholder="Cari Nama Pemesan / Nama Tamu" required> --}}
+                        {{-- <input type="text" class="form-control" name="cari" id="cari" placeholder="Cari Nama Pemesan / Nama Tamu" required> --}}
                     </div>
                     {{-- <div class="col">
                         <a href="{{ route('reservasi.index') }}" class="btn btn-outline-primary fs-5" style="padding-top:12px;width: 100px; height: 58px;">Semua</a>

@@ -14,9 +14,9 @@
     </div>
 
     @if ($message = Session::get('success'))
-        <div class="alert alert-success">
-            <p>{{ $message }}</p>
-        </div>
+    <div class="alert alert-success">
+        <p>{{ $message }}</p>
+    </div>
     @endif
 
     <table class="table table-bordered">
@@ -29,25 +29,25 @@
             <th>Aksi</th>
         </tr>
         @foreach ($resepsionis as $i => $resepsioniss)
-            <tr>
-                <td>{{ ++$i }}</td>
-                <td>{{ $resepsioniss->model_id }}</td>
-                <td>{{ $resepsioniss->name }}</td>
-                <td>{{ $resepsioniss->email }}</td>
-                {{-- <td>{{ $resepsioniss->password }}</td> --}}
-                <td>
-                    <form action="{{ route('resepsionis.destroy', $resepsioniss->model_id) }}" method="POST">
-                        <a href="{{ route('resepsionis.edit',$resepsioniss->model_id) }}" class="btn btn-primary">Edit</a>
+        <tr>
+            <td>{{ ++$i }}</td>
+            <td>{{ $resepsioniss->model_id }}</td>
+            <td>{{ $resepsioniss->name }}</td>
+            <td>{{ $resepsioniss->email }}</td>
+            {{-- <td>{{ $resepsioniss->password }}</td> --}}
+            <td>
+                <form action="{{ route('resepsionis.destroy', $resepsioniss->model_id) }}" method="POST">
+                    <a href="{{ route('resepsionis.edit',$resepsioniss->model_id) }}" class="btn btn-primary">Edit</a>
 
-                        @csrf
-                        @method('DELETE')
+                    @csrf
+                    @method('DELETE')
 
-                        <button type="submit" class="btn btn-danger">Hapus</button>
+                    <button type="submit" class="btn btn-danger">Hapus</button>
 
-                    </form>
-                </td>
-            </tr>
-            @endforeach
+                </form>
+            </td>
+        </tr>
+        @endforeach
     </table>
 
     {!! $resepsionis->links() !!}

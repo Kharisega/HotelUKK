@@ -113,34 +113,34 @@
             <hr style="margin-bottom: 55px">
             {{-- <div class="offset-md-11 mt-4 mb-2">
                 <a class="btn btn-primary" href="{{ route('tamu') }}">Kembali</a>
-            </div> --}}
-            <div class="row row-cols-1 row-cols-md-2 g-4">
-                @foreach ($kamar as $i => $kamarr)
-                <div class="col">
-                    <div class="card">
-                        <img src="{{ url('/fasilitas_kamar/') . '/' . $kamarr->gambar }}" class="card-img-top ini" alt="{{ $kamarr->gambar }}">
-                        {{-- <img src="{{ asset('img/deluxe.jpg') }}" class="card-img-top ini" alt="{{ $kamarr->gambar }}"> --}}
-                        <div class="card-body">
-                            <h5 class="card-title">{{ $kamarr->nama_fasilitas }}</h5>
-                            {{-- <p class="card-text">{{ $kamarr->keterangan }}</p> --}}
-                        </div>
+        </div> --}}
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            @foreach ($kamar as $i => $kamarr)
+            <div class="col">
+                <div class="card">
+                    <img src="{{ url('/fasilitas_kamar/') . '/' . $kamarr->gambar }}" class="card-img-top ini" alt="{{ $kamarr->gambar }}">
+                    {{-- <img src="{{ asset('img/deluxe.jpg') }}" class="card-img-top ini" alt="{{ $kamarr->gambar }}"> --}}
+                    <div class="card-body">
+                        <h5 class="card-title">{{ $kamarr->nama_fasilitas }}</h5>
+                        {{-- <p class="card-text">{{ $kamarr->keterangan }}</p> --}}
                     </div>
                 </div>
-                @endforeach
             </div>
-            <hr class="featurette-divider">
+            @endforeach
+        </div>
+        <hr class="featurette-divider">
 
 
-            <!-- FOOTER -->
-            <footer class="container">
-                {{-- <div class="float-end"><a href="#">
+        <!-- FOOTER -->
+        <footer class="container">
+            {{-- <div class="float-end"><a href="#">
                     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-arrow-up-square-fill" viewBox="0 0 16 16">
                         <path d="M2 16a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2zm6.5-4.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 1 0z" />
                     </svg>
                 </a></div> --}}
-                {{-- <a href="#"><i class="fa-duotone fa-up-from-bracket"></i></a> --}}
-                <p>&copy; 2021-2022 Tacenda Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-            </footer>
+            {{-- <a href="#"><i class="fa-duotone fa-up-from-bracket"></i></a> --}}
+            <p>&copy; 2021-2022 Tacenda Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        </footer>
     </main>
 
 
