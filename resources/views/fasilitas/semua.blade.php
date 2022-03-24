@@ -18,6 +18,10 @@
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     {{-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> --}}
     <style>
+        .gambar{
+            width: 100%;
+            height: 350px;
+        }
         .ini {
             width: auto;
             height: 350px;
@@ -109,24 +113,32 @@
     <main>
         <br>
         <div class="container marketing">
-            <div class="display-3">Fasilitas Kamar <span class="text-muted">Tipe Superior</span></div>
+            <div class="display-3">Mengapa harus <span class="text-muted">Hotel Tacenda</span>?</div>
             <hr style="margin-bottom: 55px">
-            {{-- <div class="offset-md-11 mt-4 mb-2">
-                <a class="btn btn-primary" href="{{ route('tamu') }}">Kembali</a>
-            </div> --}}
-            <div class="row row-cols-1 row-cols-md-2 g-4">
-                @foreach ($kamar as $i => $kamarr)
-                <div class="col">
-                    <div class="card">
-                        <img src="{{ url('/fasilitas_kamar/') . '/' . $kamarr->gambar }}" class="card-img-top ini" alt="{{ $kamarr->gambar }}">
-                        {{-- <img src="{{ asset('img/deluxe.jpg') }}" class="card-img-top ini" alt="{{ $kamarr->gambar }}"> --}}
-                        <div class="card-body">
-                            <h5 class="card-title">{{ $kamarr->nama_fasilitas }}</h5>
-                            <p class="card-text">{{ $kamarr->keterangan }}</p>
-                        </div>
-                    </div>
-                </div>
-                @endforeach
+                <div class="card mb-3">
+  <img src="{{ asset('img/terjangkau.jpg') }}" class="card-img-top gambar" alt="{{ asset('img/terjangkau.jpg') }}">
+  <div class="card-body">
+    <h5 class="card-title">Ramah</h5>
+    <p class="card-text">Pelayanan yang ramah dari para pegawai kami, membuat anda nyaman untuk selalu mengandalkan kami.</p>
+    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+  </div>
+</div>
+<div class="card mb-3">
+  <img src="{{ asset('img/terjangkau.jpg') }}" class="card-img-top gambar" alt="{{ asset('img/terjangkau.jpg') }}">
+  <div class="card-body">
+    <h5 class="card-title">Lengkap</h5>
+    <p class="card-text">Fasilitas yang kami sediakan untuk para tamu juga sangat lengkap, baik fasilitas tiap kamar maupun fasilitas hotel.</p>
+    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+  </div>
+</div>
+<div class="card mb-3">
+  <img src="{{ asset('img/terjangkau.jpg') }}" class="card-img-top gambar" alt="{{ asset('img/terjangkau.jpg') }}">
+  <div class="card-body">
+    <h5 class="card-title">Terjangkau</h5>
+    <p class="card-text">Kami juga memberikan harga yang terjangkau agar semua kalangan dapat menikmati pelayanan dan fasilitas kami.</p>
+    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+  </div>
+</div>
             </div>
             <hr class="featurette-divider">
 
