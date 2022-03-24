@@ -16,13 +16,14 @@ class LihatController extends Controller
 
     public function superior()
     {
-        $kamar = Fkamar::where('tipe_kamar', 'superior');
+        $kamar = Fkamar::where('tipe_kamar', 'Superior')->get();
+        // dd($kamar);
         return view('fasilitas.superior', compact('kamar'));
     }
 
     public function deluxe()
     {
-        $kamar = Fkamar::where('tipe_kamar', 'deluxe');
+        $kamar = Fkamar::where('tipe_kamar', 'Deluxe')->get();
         return view('fasilitas.deluxe', compact('kamar'));
     }
 }
