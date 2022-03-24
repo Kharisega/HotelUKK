@@ -16,6 +16,14 @@
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <style>
+    .btn-block {
+            width: 100%;
+        }
+
+        .offset-wae {
+            margin-left: 82.333%;
+            width: 18%;
+        }
       .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
@@ -142,6 +150,7 @@
 
         <h2>Ramah</h2>
         <p>Pelayanan yang ramah dari para pegawai kami, membuat anda nyaman untuk selalu mengandalkan kami.</p><br>
+        <a><a class="btn btn-secondary" href="{{ route('lengkap') }}">Lihat Selengkapnya &raquo;</a></a>
         {{-- <a><a class="btn btn-secondary" href="#">View details &raquo;</a></a> --}}
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4">
@@ -150,6 +159,7 @@
 
         <h2>Lengkap</h2>
         <p>Fasilitas yang kami sediakan untuk para tamu juga sangat lengkap, baik fasilitas tiap kamar maupun fasilitas hotel.</p><br>
+        <a><a class="btn btn-secondary" href="{{ route('lengkap') }}">Lihat Selengkapnya &raquo;</a></a>
         {{-- <a><a class="btn btn-secondary" href="#">View details &raquo;</a></a> --}}
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4">
@@ -158,6 +168,7 @@
 
         <h2>Terjangkau</h2>
         <p>Kami juga memberikan harga yang terjangkau agar semua kalangan dapat menikmati pelayanan dan fasilitas kami.</p><br>
+        <a><a class="btn btn-secondary" href="{{ route('lengkap') }}">Lihat Selengkapnya &raquo;</a></a>
         {{-- <a><a class="btn btn-secondary" href="#">View details &raquo;</a></a> --}}
       </div><!-- /.col-lg-4 -->
     </div><!-- /.row -->
@@ -176,6 +187,9 @@
         {{-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> --}}
         <img class="bd-placeholder-img" width="100%" height="100%" src="{{ asset('img/ttgkami.jpg') }}" alt="">
       </div>
+      <div class="col-md-4">
+                    <a><a class="btn btn-secondary" href="{{ route('tamu.hotel') }}">Lihat Selengkapnya &raquo;</a></a>
+      </div>
     </div>
 
     <hr class="featurette-divider">
@@ -189,6 +203,9 @@
         {{-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> --}}
         <img class="bd-placeholder-img" width="100%" height="100%" src="{{ asset('img/superior.jpg') }}" alt="">
       </div>
+      <div class="col-md-2 order-md-2 offset-wae">
+          <a><a class="btn btn-secondary" href="{{ route('tamu.superior') }}">Lihat Selengkapnya &raquo;</a></a>
+      </div>
     </div>
 
     <hr class="featurette-divider">
@@ -201,6 +218,9 @@
       <div class="col-md-5">
         {{-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> --}}
         <img class="bd-placeholder-img" width="100%" height="100%" src="{{ asset('img/deluxe.jpg') }}" alt="">
+      </div>
+      <div class="col-md-4">
+           <a><a class="btn btn-secondary" href="{{ route('tamu.deluxe') }}">Lihat Selengkapnya &raquo;</a></a>
       </div>
     </div>
 

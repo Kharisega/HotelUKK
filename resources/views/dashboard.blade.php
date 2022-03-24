@@ -33,7 +33,7 @@
     <div class="d-flex" id="wrapper">
         <!-- Sidebar-->
         <div class="border-end bg-dark" id="sidebar-wrapper">
-            <div class="sidebar-heading border-bottom bg-dark text-light">Hotel Asek Asek</div>
+            <div class="sidebar-heading border-bottom bg-dark text-light">Hotel Tacenda</div>
             <hr>
             <div class="list-group list-group-flush">
                 @if(Auth::user()->roles[0]['name'] == 'admin')
