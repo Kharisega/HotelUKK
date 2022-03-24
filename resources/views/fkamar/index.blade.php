@@ -14,9 +14,9 @@
     </div>
 
     @if ($message = Session::get('success'))
-        <div class="alert alert-success">
-            <p>{{ $message }}</p>
-        </div>
+    <div class="alert alert-success">
+        <p>{{ $message }}</p>
+    </div>
     @endif
 
     <table class="table table-bordered">
@@ -29,25 +29,25 @@
             <th>Aksi</th>
         </tr>
         @foreach ($fkamar as $i => $fkamarr)
-            <tr>
-                <td>{{ ++$i }}</td>
-                <td>{{ $fkamarr->id_fasilitas }}</td>
-                <td>{{ $fkamarr->nama_fasilitas }}</td>
-                <td>{{ $fkamarr->tipe_kamar }}</td>
-                <td><img src="{{url('/fasilitas_kamarkcl/') . '/' . $fkamarr->gambar}}" alt="{{ $fkamarr->gambar }}"></td>
-                <td>
-                    <form action="{{ route('fkamar.destroy', $fkamarr->id_fasilitas) }}" method="POST">
-                        <a href="{{ route('fkamar.edit',$fkamarr->id_fasilitas) }}" class="btn btn-primary">Edit</a>
+        <tr>
+            <td>{{ ++$i }}</td>
+            <td>{{ $fkamarr->id_fasilitas }}</td>
+            <td>{{ $fkamarr->nama_fasilitas }}</td>
+            <td>{{ $fkamarr->tipe_kamar }}</td>
+            <td><img src="{{url('/fasilitas_kamarkcl/') . '/' . $fkamarr->gambar}}" alt="{{ $fkamarr->gambar }}"></td>
+            <td>
+                <form action="{{ route('fkamar.destroy', $fkamarr->id_fasilitas) }}" method="POST">
+                    <a href="{{ route('fkamar.edit',$fkamarr->id_fasilitas) }}" class="btn btn-primary">Edit</a>
 
-                        @csrf
-                        @method('DELETE')
+                    @csrf
+                    @method('DELETE')
 
-                        <button type="submit" class="btn btn-danger">Hapus</button>
+                    <button type="submit" class="btn btn-danger">Hapus</button>
 
-                    </form>
-                </td>
-            </tr>
-            @endforeach
+                </form>
+            </td>
+        </tr>
+        @endforeach
     </table>
 
     {!! $fkamar->links() !!}

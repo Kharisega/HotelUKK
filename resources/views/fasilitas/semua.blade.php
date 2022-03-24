@@ -18,10 +18,11 @@
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     {{-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> --}}
     <style>
-        .gambar{
+        .gambar {
             width: 100%;
             height: 350px;
         }
+
         .ini {
             width: auto;
             height: 350px;
@@ -115,44 +116,44 @@
         <div class="container marketing">
             <div class="display-3">Mengapa harus <span class="text-muted">Hotel Tacenda</span>?</div>
             <hr style="margin-bottom: 55px">
-                <div class="card mb-3">
-  <img src="{{ asset('img/terjangkau.jpg') }}" class="card-img-top gambar" alt="{{ asset('img/terjangkau.jpg') }}">
-  <div class="card-body">
-    <h5 class="card-title">Ramah</h5>
-    <p class="card-text">Pelayanan yang ramah dari para pegawai kami, membuat anda nyaman untuk selalu mengandalkan kami.</p>
-    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-  </div>
-</div>
-<div class="card mb-3">
-  <img src="{{ asset('img/terjangkau.jpg') }}" class="card-img-top gambar" alt="{{ asset('img/terjangkau.jpg') }}">
-  <div class="card-body">
-    <h5 class="card-title">Lengkap</h5>
-    <p class="card-text">Fasilitas yang kami sediakan untuk para tamu juga sangat lengkap, baik fasilitas tiap kamar maupun fasilitas hotel.</p>
-    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-  </div>
-</div>
-<div class="card mb-3">
-  <img src="{{ asset('img/terjangkau.jpg') }}" class="card-img-top gambar" alt="{{ asset('img/terjangkau.jpg') }}">
-  <div class="card-body">
-    <h5 class="card-title">Terjangkau</h5>
-    <p class="card-text">Kami juga memberikan harga yang terjangkau agar semua kalangan dapat menikmati pelayanan dan fasilitas kami.</p>
-    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-  </div>
-</div>
+            <div class="card mb-3">
+                <img src="{{ asset('img/terjangkau.jpg') }}" class="card-img-top gambar" alt="{{ asset('img/terjangkau.jpg') }}">
+                <div class="card-body">
+                    <h5 class="card-title">Ramah</h5>
+                    <p class="card-text">Pelayanan yang ramah dari para pegawai kami, membuat anda nyaman untuk selalu mengandalkan kami.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
             </div>
-            <hr class="featurette-divider">
+            <div class="card mb-3">
+                <img src="{{ asset('img/terjangkau.jpg') }}" class="card-img-top gambar" alt="{{ asset('img/terjangkau.jpg') }}">
+                <div class="card-body">
+                    <h5 class="card-title">Lengkap</h5>
+                    <p class="card-text">Fasilitas yang kami sediakan untuk para tamu juga sangat lengkap, baik fasilitas tiap kamar maupun fasilitas hotel.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+            <div class="card mb-3">
+                <img src="{{ asset('img/terjangkau.jpg') }}" class="card-img-top gambar" alt="{{ asset('img/terjangkau.jpg') }}">
+                <div class="card-body">
+                    <h5 class="card-title">Terjangkau</h5>
+                    <p class="card-text">Kami juga memberikan harga yang terjangkau agar semua kalangan dapat menikmati pelayanan dan fasilitas kami.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+        </div>
+        <hr class="featurette-divider">
 
 
-            <!-- FOOTER -->
-            <footer class="container">
-                {{-- <div class="float-end"><a href="#">
+        <!-- FOOTER -->
+        <footer class="container">
+            {{-- <div class="float-end"><a href="#">
                     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-arrow-up-square-fill" viewBox="0 0 16 16">
                         <path d="M2 16a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2zm6.5-4.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 1 0z" />
                     </svg>
                 </a></div> --}}
-                {{-- <a href="#"><i class="fa-duotone fa-up-from-bracket"></i></a> --}}
-                <p>&copy; 2021-2022 Tacenda Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-            </footer>
+            {{-- <a href="#"><i class="fa-duotone fa-up-from-bracket"></i></a> --}}
+            <p>&copy; 2021-2022 Tacenda Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        </footer>
     </main>
 
 

@@ -14,9 +14,9 @@
     </div>
 
     @if ($message = Session::get('success'))
-        <div class="alert alert-success">
-            <p>{{ $message }}</p>
-        </div>
+    <div class="alert alert-success">
+        <p>{{ $message }}</p>
+    </div>
     @endif
 
     <table class="table table-bordered">
@@ -29,25 +29,25 @@
             <th>Aksi</th>
         </tr>
         @foreach ($admin as $i => $adminn)
-            <tr>
-                <td>{{ ++$i }}</td>
-                <td>{{ $adminn->model_id }}</td>
-                <td>{{ $adminn->name }}</td>
-                <td>{{ $adminn->email }}</td>
-                {{-- <td>{{ $adminn->password }}</td> --}}
-                <td>
-                    <form action="{{ route('admin.destroy', $adminn->model_id) }}" method="POST">
-                        <a href="{{ route('admin.edit',$adminn->model_id) }}" class="btn btn-primary">Edit</a>
+        <tr>
+            <td>{{ ++$i }}</td>
+            <td>{{ $adminn->model_id }}</td>
+            <td>{{ $adminn->name }}</td>
+            <td>{{ $adminn->email }}</td>
+            {{-- <td>{{ $adminn->password }}</td> --}}
+            <td>
+                <form action="{{ route('admin.destroy', $adminn->model_id) }}" method="POST">
+                    <a href="{{ route('admin.edit',$adminn->model_id) }}" class="btn btn-primary">Edit</a>
 
-                        @csrf
-                        @method('DELETE')
+                    @csrf
+                    @method('DELETE')
 
-                        <button type="submit" class="btn btn-danger">Hapus</button>
+                    <button type="submit" class="btn btn-danger">Hapus</button>
 
-                    </form>
-                </td>
-            </tr>
-            @endforeach
+                </form>
+            </td>
+        </tr>
+        @endforeach
     </table>
 
     {!! $admin->links() !!}
