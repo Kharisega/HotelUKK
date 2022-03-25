@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Reservasi;
+use DB;
 // use Alert;
 use RealRashid\SweetAlert\Facades\Alert;
 
@@ -53,5 +54,15 @@ class TamuController extends Controller
         // Alert::success('Sukses', 'Pemesanan Kamar anda sudah berhasil diproses!');
         Alert::toast('Pemesanan kamar sudah berhasil!', 'success');
         return redirect()->route('tamu');
+    }
+
+    public function pesanan()
+    {
+        // dd(auth()->user()->email);
+        $pesanan = DB::table('reservasi')
+        ->where('email', auth()->user()->email)
+        ->paginate(5);
+        // dd($pesanan);
+        return view('tamu.pesanan', compact('pesanan'));
     }
 }
