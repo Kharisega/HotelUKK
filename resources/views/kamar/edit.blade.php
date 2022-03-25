@@ -43,12 +43,6 @@
                     <input type="number" name="jumlah_kamar" class="form-control" value="{{ $kamar->jumlah_kamar}}" placeholder="cth. Keadaan Normal">
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Gambar :</strong>
-                    <input type="file" name="gambar" class="form-control-file">
-                </div>
-            </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                 <button type="submit" class="btn btn-primary">Edit</button>
             </div>

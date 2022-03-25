@@ -24,6 +24,7 @@ Route::get('/lengkap', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/testing', 'CobaController@index')->name('testing');
 Route::middleware('auth')->get('/tamu', 'TamuController@index')->name('tamu');
 Route::post('/tamu/pesan', 'TamuController@pesan')->name('tamu.pesan');
 Route::get('/tamu/pesanan', 'TamuController@pesanan')->name('tamu.pesanan');
@@ -52,3 +53,4 @@ Route::middleware('role:admin')->resource('resepsionis', 'ResepsionisController'
 Route::middleware('role:resepsionis')->get('reservasi', 'ReservasiController@index')->name('reservasi.index');  
 Route::middleware('role:resepsionis')->post('reservasi/cari', 'ReservasiController@cari')->name('reservasi.cari');  
 Route::middleware('role:resepsionis')->post('reservasi/filter', 'ReservasiController@filter')->name('reservasi.filter');  
+Route::middleware('role:resepsionis')->delete('reservasi/destroy/{reservasi}', 'ReservasiController@destroy')->name('reservasi.destroy');  

@@ -39,4 +39,10 @@ class ReservasiController extends Controller
         
         return view('reservasi.index', compact('reservasi'));
     }
+
+    public function destroy(Reservasi $reservasi)
+    {
+        $reservasi->delete();
+        return redirect()->route('reservasi.index')->with('success', 'Pesanan sudah berhasil Check-Out!');
+    }
 }

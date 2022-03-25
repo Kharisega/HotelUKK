@@ -112,7 +112,7 @@
         <div class="container marketing">
             <div class="display-3">Bukti Reservasi</div><br>
             <div class="display-7">Customer dengan E-mail {{ Auth::user()->email }}</div><br>
-            <table class="table table-dark table-striped align-middle">
+            <table class="table table-light table-striped align-middle">
                 <tr>
                     <th>No</th>
                     <th>Nama Tamu</th>

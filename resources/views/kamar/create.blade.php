@@ -44,12 +44,6 @@
                     <input type="number" name="jumlah_kamar" class="form-control">
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Gambar :</strong>
-                    <input type="file" name="gambar" id="gambar" class="form-control-file">
-                </div>
-            </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                 <button type="submit" class="btn btn-primary">Simpan</button>
             </div>
