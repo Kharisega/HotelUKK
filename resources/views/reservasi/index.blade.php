@@ -70,17 +70,15 @@
         <td>{{ $reservasii->tipe_kamar }}</td>
         <td>{{ $reservasii->notelp_tamu }}</td>
         <td>{{ $reservasii->email }}</td>
-        {{-- <td>
-                    <form action="{{ route('kamar.destroy', $kamarr->id_kamar) }}" method="POST">
-        <a href="{{ route('kamar.edit',$kamarr->id_kamar) }}" class="btn btn-primary">Edit</a>
+        <td>
+            <form action="{{ route('reservasi.destroy', $reservasii->id_reservasi) }}" method="POST">
+                @csrf
+                @method('DELETE')
 
-        @csrf
-        @method('DELETE')
+                <button type="submit" class="btn btn-warning">Check-Out</button>
 
-        <button type="submit" class="btn btn-danger">Hapus</button>
-
-        </form>
-        </td> --}}
+            </form>
+        </td>
     </tr>
     @endforeach
 </table>

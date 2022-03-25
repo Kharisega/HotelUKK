@@ -41,23 +41,33 @@ class KamarController extends Controller
         $request->validate([
             'tipe_kamar'=>'required',
             'jumlah_kamar'=>'required',
-            'gambar'=>'required|image|mimes:jpeg,png,jpg,gif,svg|max:1024',
         ]);
 
-        $namegambar = $request->file('gambar');
-        $gambar = $request->file('gambar')->getClientOriginalName();
+        $tipekamar = $request->tipe_kamar;
 
-        $thumbgambar = Image::make($namegambar->getRealPath())->resize(85, 85);
-        $thumbPath = public_path() . '/fasilitas_hotel/' . $gambar;
-        $thumbgambar = Image::make($thumbgambar)->save($thumbPath);
+        if ($tipekamar == 'Superior') {
 
-        Kamar::create([
+            $id = 1;
+            $jumlahawal = DB::table('kamar')->where('tipe_kamar', 'Superior')->value('jumlah_kamar');
+            $jumlahakhir = $jumlahawal + $request->jumlah_kamar;
+
+        } else {
+            
+            $id = 2;
+            $jumlahawal = DB::table('kamar')->where('tipe_kamar', 'Deluxe')->value('jumlah_kamar');
+            $jumlahakhir = $jumlahawal + $request->jumlah_kamar;
+            
+        }
+        
+
+        $update = DB::table('kamar')
+        ->where('id_kamar', $id)
+        ->update([
             'tipe_kamar' => $request['tipe_kamar'],
-            'jumlah_kamar' => $request['jumlah_kamar'],
-            'gambar' => $gambar,
+            'jumlah_kamar' => $jumlahakhir,
         ]);
 
-        return redirect()->route('kamar.index')->with('success', "Data Kamar Berhasil ditambahkan");
+        return redirect()->route('kamar.index')->with('success', "Jumlah Kamar Berhasil ditambahkan");
     }
 
     /**

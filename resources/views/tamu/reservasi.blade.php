@@ -157,8 +157,8 @@
                     <div class="col-sm-10">
                         <select name="tipe_kamar" id="tipe_kamar" class="form-control">
                             <option selected class="form-select form-check disabled text-muted  " aria-label="disabled select example" disabled>Pilih salah satu tipe kamar</option>
-                            <option value="superior">Superior</option>
-                            <option value="deluxe">Deluxe</option>
+                            <option value="superior" @if($jml_super <= 0) disabled @endif>Superior -- Sisa Kamar : {{ $jml_super }} --</option>
+                            <option value="deluxe" @if($jml_delux <= 0) disabled @endif>Deluxe -- Sisa Kamar : {{ $jml_delux }} --</option>
                         </select>
                     </div>
                 </div>

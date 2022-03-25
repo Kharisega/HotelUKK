@@ -17,7 +17,6 @@ class CreateKamarTable extends Migration
             $table->id('id_kamar');
             $table->string('tipe_kamar');
             $table->integer('jumlah_kamar');
-            $table->string('gambar');
             $table->timestamps();
         });
     }

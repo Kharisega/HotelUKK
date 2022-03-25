@@ -177,19 +177,19 @@
                 <div class="row g-2">
                     <div class="col-md">
                         <div class="form-floating">
-                            <input type="date" name="tgl_checkin" class="form-control" id="floatingInputGrid">
+                            <input type="date" name="tgl_checkin" class="form-control" id="floatingInputGrid" required>
                             <label for="floatingInputGrid">Tanggal Check In</label>
                         </div>
                     </div>
                     <div class="col-md">
                         <div class="form-floating">
-                            <input type="date" name="tgl_checkout" class="form-control" id="floatingInputGrid">
+                            <input type="date" name="tgl_checkout" class="form-control" id="floatingInputGrid" required>
                             <label for="floatingInputGrid">Tanggal Check Out</label>
                         </div>
                     </div>
                     <div class="col-md">
                         <div class="form-floating">
-                            <input type="number" name="jumlah_kamar" class="form-control" id="floatingInputGrid">
+                            <input type="number" name="jumlah_kamar" class="form-control" id="floatingInputGrid" required>
                             <label for="floatingInputGrid">Jumlah Kamar</label>
                         </div>
                     </div>
