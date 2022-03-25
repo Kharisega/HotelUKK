@@ -65,4 +65,13 @@ class TamuController extends Controller
         // dd($pesanan);
         return view('tamu.pesanan', compact('pesanan'));
     }
+
+    public function cetak(Request $request)
+    {
+        $cetak = DB::table('reservasi')
+        ->where('id_reservasi', $request->id_reservasi)
+        ->get();
+        // dd($cetak);
+        return view('tamu.cetak', compact('cetak'));
+    }
 }
