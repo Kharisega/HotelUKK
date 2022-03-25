@@ -20,6 +20,7 @@ Route::get('/lengkap', function () {
     return view('fasilitas.semua');
 })->name('lengkap');
 
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -30,6 +31,7 @@ Route::post('/tamu/reservasi', 'TamuController@reservasi')->name('tamu.reservasi
 Route::get('/dashboard', 'HomeController@dashboard')->name('dashboard');
 
 //! Route untuk Tamu
+Route::post('/tamu/cetak/{id_reservasi}', 'TamuController@cetak')->name('tamu.cetak');
 Route::get('/tamu/hotel', 'LihatController@hotel')->name('tamu.hotel');
 Route::get('/tamu/superior', 'LihatController@superior')->name('tamu.superior');
 Route::get('/tamu/deluxe', 'LihatController@deluxe')->name('tamu.deluxe');

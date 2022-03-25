@@ -127,11 +127,11 @@
                     <td>{{ $pesanann->tgl_checkin }}</td>
                     <td>{{ $pesanann->tgl_checkout }}</td>
                     <td>
-                        {{-- <form action="{{ route('tahun.cetak', $pesanann->id_reservasi) }}" method="POST">
+                        <form action="{{ route('tamu.cetak', $pesanann->id_reservasi) }}" method="POST"  target="_blank">
                             @csrf
                             <button type="submit" class="btn btn-warning">Cetak</button>
-                        </form> --}}
-                        <button type="submit" class="btn btn-warning">Cetak</button>
+                        </form>
+                        {{-- <button type="submit" class="btn btn-warning">Cetak</button> --}}
                     </td>
                 </tr>
                 @endforeach
