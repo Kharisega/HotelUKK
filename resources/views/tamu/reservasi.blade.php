@@ -164,7 +164,7 @@
                 </div>
                 <div class="form-group row py-2">
                     <div class="col-sm-10 offset-md-2 mt-2">
-                        <button type="submit" id="pesan" class="btn btn-lg btn btn-primary panjang mr-12">Pesan</button>
+                        <button type="submit" id="pesan" class="btn btn-lg btn btn-primary panjang mr-12">Konfirmasi Pesan</button>
                         <input type="button" onclick="resetForm()" class="btn btn-secondary btn-lg" value="Reset">
                     </div>
                 </div>

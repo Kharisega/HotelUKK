@@ -52,13 +52,19 @@
     <header>
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand col-sm-10" href="{{ route('tamu') }}">Tacenda</a>
+                <a class="navbar-brand col-sm-9" href="{{ route('tamu') }}">Tacenda</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse .col-6 .col-md-4" id="navbarCollapse">
                     <ul class="navbar-nav me-auto mb-2 mb-md-0">
                         {{-- <ul class="navbar-nav d-flex justify-content-end"> --}}
+                        <li class="nav-item">
+                            <a href="{{ route('tamu') }}" class="nav-link">{{ __('Beranda') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('tamu.pesanan') }}" class="nav-link">{{ __('Pesanan') }}</a>
+                        </li>
                         @if (Route::has('login'))
                         @guest
                         <li class="nav-item">
@@ -114,7 +120,7 @@
                         <div class="carousel-caption text-start">
                             <h1>Be Yourself</h1>
                             <p>There's no one better.</p>
-                            <a><a class="btn btn-lg btn-primary" href="{{ route('register') }}">Daftar Sekarang!</a></a>
+                            {{-- <a><a class="btn btn-lg btn-primary" href="{{ route('register') }}">Daftar Sekarang!</a></a> --}}
                         </div>
                     </div>
                 </div>
