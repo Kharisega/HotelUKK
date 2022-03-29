@@ -152,7 +152,7 @@
 
                     <h2>Ramah</h2>
                     <p>Pelayanan yang ramah dari para pegawai kami, membuat anda nyaman untuk selalu mengandalkan kami.</p><br>
-                    <a><a class="btn btn-secondary" href="{{ route('lengkap') }}">Lihat Selengkapnya &raquo;</a></a>
+                    {{-- <a><a class="btn btn-secondary" href="{{ route('lengkap') }}">Lihat Selengkapnya &raquo;</a></a> --}}
                     {{-- <a><a class="btn btn-secondary" href="#">View details &raquo;</a></a> --}}
                 </div><!-- /.col-lg-4 -->
                 <div class="col-lg-4">
@@ -161,7 +161,7 @@
 
                     <h2>Lengkap</h2>
                     <p>Fasilitas yang kami sediakan untuk para tamu juga sangat lengkap, baik fasilitas tiap kamar maupun fasilitas hotel.</p><br>
-                    <a><a class="btn btn-secondary" href="{{ route('lengkap') }}">Lihat Selengkapnya &raquo;</a></a>
+                    {{-- <a><a class="btn btn-secondary" href="{{ route('lengkap') }}">Lihat Selengkapnya &raquo;</a></a> --}}
                     {{-- <a><a class="btn btn-secondary" href="#">View details &raquo;</a></a> --}}
                 </div><!-- /.col-lg-4 -->
                 <div class="col-lg-4">
@@ -170,7 +170,7 @@
 
                     <h2>Terjangkau</h2>
                     <p>Kami juga memberikan harga yang terjangkau agar semua kalangan dapat menikmati pelayanan dan fasilitas kami.</p><br>
-                    <a><a class="btn btn-secondary" href="{{ route('lengkap') }}">Lihat Selengkapnya &raquo;</a></a>
+                    {{-- <a><a class="btn btn-secondary" href="{{ route('lengkap') }}">Lihat Selengkapnya &raquo;</a></a> --}}
                     {{-- <a><a class="btn btn-secondary" href="#">View details &raquo;</a></a> --}}
                 </div><!-- /.col-lg-4 -->
             </div><!-- /.row -->
