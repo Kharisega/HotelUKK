@@ -36,6 +36,7 @@ Route::post('/tamu/cetak/{id_reservasi}', 'TamuController@cetak')->name('tamu.ce
 Route::get('/tamu/hotel', 'LihatController@hotel')->name('tamu.hotel');
 Route::get('/tamu/superior', 'LihatController@superior')->name('tamu.superior');
 Route::get('/tamu/deluxe', 'LihatController@deluxe')->name('tamu.deluxe');
+Route::delete('tamu/destroy/{reservasi}', 'TamuController@destroy')->name('tamu.destroy');  
 
 //! Route khusus untuk Admin
 Route::middleware('role:admin')->resource('kamar', 'KamarController');  

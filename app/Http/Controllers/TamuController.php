@@ -101,4 +101,10 @@ class TamuController extends Controller
         // dd($cetak);
         return view('tamu.cetak', compact('cetak'));
     }
+    public function destroy(Reservasi $reservasi)
+    {
+        $reservasi->delete();
+        Alert::toast('Pesanan sudah berhasil dibatalkan!', 'success');
+        return redirect()->route('tamu.pesanan');
+    }
 }
