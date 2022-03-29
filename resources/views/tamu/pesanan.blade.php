@@ -51,7 +51,7 @@
     <link href="{{ asset('css/carousel.css') }}" rel="stylesheet">
 </head>
 <body>
-
+@include('sweetalert::alert')
     <header>
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
             <div class="container-fluid">
@@ -127,10 +127,21 @@
                     <td>{{ $pesanann->tgl_checkin }}</td>
                     <td>{{ $pesanann->tgl_checkout }}</td>
                     <td>
+                        <div class="row">
+                            <div class="col col-sm-3">    
                         <form action="{{ route('tamu.cetak', $pesanann->id_reservasi) }}" method="POST"  target="_blank">
                             @csrf
                             <button type="submit" class="btn btn-warning">Cetak</button>
                         </form>
+                            </div>
+                            <div class="col">
+                        <form action="{{ route('tamu.destroy', $pesanann->id_reservasi) }}" method="POST">
+                            @csrf
+                            @method('delete')
+                            <button type="submit" class="btn btn-danger">Batal Pesanan</button>
+                        </form>
+                            </div>
+                        </div>
                         {{-- <button type="submit" class="btn btn-warning">Cetak</button> --}}
                     </td>
                 </tr>

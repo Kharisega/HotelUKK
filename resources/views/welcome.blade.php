@@ -11,6 +11,9 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/carousel/">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" href="{{ asset('img/logo t.png') }}" type="image/icon type">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Palette+Mosaic&display=swap" rel="stylesheet">
 
 
     <!-- Bootstrap core CSS -->
@@ -50,7 +53,7 @@
     <header>
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand col-sm-10" href="#">Tacenda</a>
+                <a class="navbar-brand col-sm-10" href="{{ route('welcome') }}" style="font-family: 'Palette Mosaic', cursive;">Tacenda</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -60,7 +63,7 @@
                         @if (Route::has('login'))
                         @auth
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="{{ url('/home') }}">Home</a>
+                            <a class="nav-link active" aria-current="page" href="{{ url('/tamu') }}">Beranda</a>
                         </li>
                         @else
                         <li class="nav-item">
@@ -98,8 +101,8 @@
                     <img class="bd-placeholder-img" width="100%" height="100%" src="{{ asset('img/hotel2.jpg') }}" alt="">
                     <div class="container">
                         <div class="carousel-caption text-start">
-                            <h1>Be Yourself</h1>
-                            <p>There's no one better.</p>
+                            <h1 style="font-family: 'Palette Mosaic', cursive; color:#AFEEEE;">Be Yourself</h1>
+                            <p style="font-family: 'Palette Mosaic', cursive; color:#AFEEEE;">There's no one better.</p>
                             <a><a class="btn btn-lg btn-primary" href="{{ route('register') }}">Daftar Sekarang!</a></a>
                         </div>
                     </div>
@@ -109,8 +112,8 @@
                     <img class="bd-placeholder-img" width="100%" height="100%" src="{{ asset('img/hotel3.jpg') }}" alt="">
                     <div class="container">
                         <div class="carousel-caption">
-                            <h1>We travel not to escape life,</h1>
-                            <p>But for life not to escape us.</p>
+                            <h1 style="font-family: 'Palette Mosaic', cursive; color:#FF6347;">We travel not to escape life,</h1>
+                            <p style="font-family: 'Palette Mosaic', cursive; color:#FF6347;">But for life not to escape us.</p>
                             {{-- <a><a class="btn btn-lg btn-primary" href="#">Learn more</a></a> --}}
                         </div>
                     </div>
@@ -120,8 +123,8 @@
                     <img class="bd-placeholder-img" width="100%" height="100%" src="{{ asset('img/hotel1.jpg') }}" alt="">
                     <div class="container">
                         <div class="carousel-caption text-end">
-                            <h1>Only you can change your life.</h1>
-                            <p>Nobody else can do it for you.</p>
+                            <h1 style="font-family: 'Palette Mosaic', cursive; color:#00FFFF;">Only you can change your life.</h1>
+                            <p style="font-family: 'Palette Mosaic', cursive; color:#00FFFF;">Nobody else can do it for you.</p>
                             {{-- <a><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></a> --}}
                         </div>
                     </div>
