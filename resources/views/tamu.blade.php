@@ -11,6 +11,9 @@
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/carousel/">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Palette+Mosaic&display=swap" rel="stylesheet">
     <link rel="icon" href="{{ asset('img/logo t.png') }}" type="image/icon type">
 
 
@@ -52,7 +55,7 @@
     <header>
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand col-sm-9" href="{{ route('tamu') }}">Tacenda</a>
+                <a class="navbar-brand col-sm-9" href="{{ route('tamu') }}" style="font-family: 'Palette Mosaic', cursive;">Tacenda</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -118,8 +121,8 @@
                     <img class="bd-placeholder-img" width="100%" height="100%" src="{{ asset('img/hotel2.jpg') }}" alt="">
                     <div class="container">
                         <div class="carousel-caption text-start">
-                            <h1>Be Yourself</h1>
-                            <p>There's no one better.</p>
+                            <h1 style="font-family: 'Palette Mosaic', cursive; color:#AFEEEE;">Be Yourself</h1>
+                            <p style="font-family: 'Palette Mosaic', cursive; color:#AFEEEE;">There's no one better.</p>
                             {{-- <a><a class="btn btn-lg btn-primary" href="{{ route('register') }}">Daftar Sekarang!</a></a> --}}
                         </div>
                     </div>
@@ -129,8 +132,8 @@
                     <img class="bd-placeholder-img" width="100%" height="100%" src="{{ asset('img/hotel3.jpg') }}" alt="">
                     <div class="container">
                         <div class="carousel-caption">
-                            <h1>We travel not to escape life,</h1>
-                            <p>But for life not to escape us.</p>
+                            <h1 style="font-family: 'Palette Mosaic', cursive; color:#FF6347;">We travel not to escape life,</h1>
+                            <p style="font-family: 'Palette Mosaic', cursive; color:#FF6347;">But for life not to escape us.</p>
                             {{-- <a><a class="btn btn-lg btn-primary" href="#">Learn more</a></a> --}}
                         </div>
                     </div>
@@ -140,8 +143,8 @@
                     <img class="bd-placeholder-img" width="100%" height="100%" src="{{ asset('img/hotel1.jpg') }}" alt="">
                     <div class="container">
                         <div class="carousel-caption text-end">
-                            <h1>Only you can change your life.</h1>
-                            <p>Nobody else can do it for you.</p>
+                            <h1 style="font-family: 'Palette Mosaic', cursive; color:#00FFFF;">Only you can change your life.</h1>
+                            <p style="font-family: 'Palette Mosaic', cursive; color:#00FFFF;">Nobody else can do it for you.</p>
                             {{-- <a><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></a> --}}
                         </div>
                     </div>
@@ -209,7 +212,7 @@
 
                     <h2>Ramah</h2>
                     <p>Pelayanan yang ramah dari para pegawai kami, membuat anda nyaman untuk selalu mengandalkan kami.</p><br>
-                    <a><a class="btn btn-secondary" href="#">Lihat Selengkapnya &raquo;</a></a>
+                    {{-- <a><a class="btn btn-secondary" href="#">Lihat Selengkapnya &raquo;</a></a> --}}
                 </div><!-- /.col-lg-4 -->
                 <div class="col-lg-4">
                     {{-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg> --}}
@@ -217,7 +220,7 @@
 
                     <h2>Lengkap</h2>
                     <p>Fasilitas yang kami sediakan untuk para tamu juga sangat lengkap, baik fasilitas tiap kamar maupun fasilitas hotel.</p><br>
-                    <a><a class="btn btn-secondary" href="#">Lihat Selengkapnya &raquo;</a></a>
+                    {{-- <a><a class="btn btn-secondary" href="#">Lihat Selengkapnya &raquo;</a></a> --}}
                 </div><!-- /.col-lg-4 -->
                 <div class="col-lg-4">
                     {{-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg> --}}
@@ -225,7 +228,7 @@
 
                     <h2>Terjangkau</h2>
                     <p>Kami juga memberikan harga yang terjangkau agar semua kalangan dapat menikmati pelayanan dan fasilitas kami.</p><br>
-                    <a><a class="btn btn-secondary" href="#">Lihat Selengkapnya &raquo;</a></a>
+                    {{-- <a><a class="btn btn-secondary" href="#">Lihat Selengkapnya &raquo;</a></a> --}}
                 </div><!-- /.col-lg-4 -->
             </div><!-- /.row -->
 
