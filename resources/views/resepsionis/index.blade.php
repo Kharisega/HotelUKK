@@ -38,7 +38,7 @@
             <td>
                 <form action="{{ route('resepsionis.destroy', $resepsioniss->model_id) }}" method="POST">
                     <a href="{{ route('resepsionis.edit',$resepsioniss->model_id) }}" class="btn btn-primary">Edit</a>
-
+4
                     @csrf
                     @method('DELETE')
 
