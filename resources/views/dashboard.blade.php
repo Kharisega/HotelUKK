@@ -28,13 +28,27 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/dash.css') }}" rel="stylesheet">
+    <style>
+        .navbar, .bg-warna{
+            background: #f75959;
+            background: -moz-linear-gradient(-45deg, #f75959 0%, #f35587 100%);
+            background: -webkit-gradient(left top, right bottom, color-stop(0%, #f75959), color-stop(100%, #f35587));
+            background: -webkit-linear-gradient(-45deg, #f75959 0%, #f35587 100%);
+            background: -o-linear-gradient(-45deg, #f75959 0%, #f35587 100%);
+            background: -ms-linear-gradient(-45deg, #f75959 0%, #f35587 100%);
+            background: -webkit-linear-gradient(315deg, #f75959 0%, #f35587 100%);
+            background: -o-linear-gradient(315deg, #f75959 0%, #f35587 100%);
+            background: linear-gradient(135deg, #f75959 0%, #f35587 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f75959', endColorstr='#f35587', GradientType=1);
+        }
+    </style>
 </head>
 <body>
     <div class="d-flex" id="wrapper">
         <!-- Sidebar-->
-        <div class="border-end bg-dark" id="sidebar-wrapper">
-            <div class="sidebar-heading border-bottom bg-dark text-light">Hotel Tacenda</div>
-            <hr>
+        <div class="border-end bg-warna" id="sidebar-wrapper">
+            <div class="sidebar-heading border-bottom text-light" style="background-color: #f35587; font-weight:600; font-family:Nunito; font-size:26px">Hotel Tacenda</div>
+            <br>
             <div class="list-group list-group-flush">
                 @if(Auth::user()->roles[0]['name'] == 'admin')
                 <a class="list-group-item list-group-item-action list-group-item-dark p-3" href="#!">Dashboard</a>
@@ -53,7 +67,7 @@
         <!-- Page content wrapper-->
         <div id="page-content-wrapper">
             <!-- Top navigation-->
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom" style="height: 68px">
                 <div class="container-fluid">
                     <button class="btn btn-primary" id="sidebarToggle">
                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">

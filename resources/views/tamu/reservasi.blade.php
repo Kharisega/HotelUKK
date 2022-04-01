@@ -12,6 +12,8 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/carousel/">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" href="{{ asset('img/logo t.png') }}" type="image/icon type">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
 
 
     <!-- Bootstrap core CSS -->
@@ -43,6 +45,19 @@
                 font-size: 3.5rem;
             }
         }
+        
+        .navbar {
+            background: #f75959;
+            background: -moz-linear-gradient(-45deg, #f75959 0%, #f35587 100%);
+            background: -webkit-gradient(left top, right bottom, color-stop(0%, #f75959), color-stop(100%, #f35587));
+            background: -webkit-linear-gradient(-45deg, #f75959 0%, #f35587 100%);
+            background: -o-linear-gradient(-45deg, #f75959 0%, #f35587 100%);
+            background: -ms-linear-gradient(-45deg, #f75959 0%, #f35587 100%);
+            background: -webkit-linear-gradient(315deg, #f75959 0%, #f35587 100%);
+            background: -o-linear-gradient(315deg, #f75959 0%, #f35587 100%);
+            background: linear-gradient(135deg, #f75959 0%, #f35587 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f75959', endColorstr='#f35587', GradientType=1);
+        }
 
     </style>
 
@@ -55,7 +70,7 @@
     <header>
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand col-sm-10" href="#">Tacenda</a>
+                <a class="navbar-brand col-sm-10" href="#" style="font-family: 'Palette Mosaic', cursive;">Tacenda</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
