@@ -5372,11 +5372,11 @@ textarea.form-control-lg {
 }
 
 .list-group-item-dark {
-  color: #141619;
-  background-color: #d3d3d4;
+  color: whitesmoke;
+  background-color: #141619;
 }
 .list-group-item-dark.list-group-item-action:hover, .list-group-item-dark.list-group-item-action:focus {
-  color: #141619;
+  color: #f75959;
   background-color: #bebebf;
 }
 .list-group-item-dark.list-group-item-action.active {
@@ -11314,4 +11314,16 @@ body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
   body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
     margin-left: -15rem;
   }
+}
+
+input#nama_tamu {
+  width: 245px;
+}
+
+input#tgl_checkin {
+  width: 245px;
+}
+
+.satu {
+  width: max-content;
 }

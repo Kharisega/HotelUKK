@@ -8,7 +8,7 @@
                 <h2>Data Resepsionis</h2>
             </div>
             <div class="pull-right mt-4 mb-4">
-                <a href="{{ route('resepsionis.create') }}" class="btn btn-success">Tambah Data</a>
+                <a href="{{ route('resepsionis.create') }}" class="btn btn-outline-warning">Tambah Data</a>
             </div>
         </div>
     </div>
@@ -37,12 +37,12 @@
             {{-- <td>{{ $resepsioniss->password }}</td> --}}
             <td>
                 <form action="{{ route('resepsionis.destroy', $resepsioniss->model_id) }}" method="POST">
-                    <a href="{{ route('resepsionis.edit',$resepsioniss->model_id) }}" class="btn btn-primary">Edit</a>
-4
+                    <a href="{{ route('resepsionis.edit',$resepsioniss->model_id) }}" class="btn btn-outline-success">Edit</a>
+
                     @csrf
                     @method('DELETE')
 
-                    <button type="submit" class="btn btn-danger">Hapus</button>
+                    <button type="submit" class="btn btn-outline-danger">Hapus</button>
 
                 </form>
             </td>

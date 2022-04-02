@@ -8,7 +8,7 @@
                 <h2>Data Administrator</h2>
             </div>
             <div class="pull-right mt-4 mb-4">
-                <a href="{{ route('admin.create') }}" class="btn btn-success">Tambah Data</a>
+                <a href="{{ route('admin.create') }}" class="btn btn-outline-warning">Tambah Data</a>
             </div>
         </div>
     </div>
@@ -37,12 +37,12 @@
             {{-- <td>{{ $adminn->password }}</td> --}}
             <td>
                 <form action="{{ route('admin.destroy', $adminn->model_id) }}" method="POST">
-                    <a href="{{ route('admin.edit',$adminn->model_id) }}" class="btn btn-primary">Edit</a>
+                    <a href="{{ route('admin.edit',$adminn->model_id) }}" class="btn btn-outline-success">Edit</a>
 
                     @csrf
                     @method('DELETE')
 
-                    <button type="submit" class="btn btn-danger">Hapus</button>
+                    <button type="submit" class="btn btn-outline-danger">Hapus</button>
 
                 </form>
             </td>
