@@ -47,16 +47,7 @@
         }
         
         .navbar {
-            background: #f75959;
-            background: -moz-linear-gradient(-45deg, #f75959 0%, #f35587 100%);
-            background: -webkit-gradient(left top, right bottom, color-stop(0%, #f75959), color-stop(100%, #f35587));
-            background: -webkit-linear-gradient(-45deg, #f75959 0%, #f35587 100%);
-            background: -o-linear-gradient(-45deg, #f75959 0%, #f35587 100%);
-            background: -ms-linear-gradient(-45deg, #f75959 0%, #f35587 100%);
-            background: -webkit-linear-gradient(315deg, #f75959 0%, #f35587 100%);
-            background: -o-linear-gradient(315deg, #f75959 0%, #f35587 100%);
-            background: linear-gradient(135deg, #f75959 0%, #f35587 100%);
-            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f75959', endColorstr='#f35587', GradientType=1);
+            background-color: #490d75 !important;
         }
 
     </style>
@@ -70,7 +61,7 @@
     <header>
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand col-sm-10" href="#" style="font-family: 'Palette Mosaic', cursive;">Tacenda</a>
+                <a class="navbar-brand col-sm-10" href="{{ route('tamu') }}" style="font-family: 'Palette Mosaic', cursive;">Tacenda</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -179,8 +170,8 @@
                 </div>
                 <div class="form-group row py-2">
                     <div class="col-sm-10 offset-md-2 mt-2">
-                        <button type="submit" id="pesan" class="btn btn-lg btn btn-primary panjang mr-12">Konfirmasi Pesan</button>
-                        <input type="button" onclick="resetForm()" class="btn btn-secondary btn-lg" value="Reset">
+                        <button type="submit" id="pesan" class="btn btn-lg btn btn-primary panjang mr-12" style="background: #8f65a3 !important; border-color:#8f65a3;">Konfirmasi Pesan</button>
+                        <input type="button" onclick="resetForm()" class="btn btn-secondary btn-lg" style="background: #e9967a !important; border-color:#e9967a;" value="Reset">
                     </div>
                 </div>
             </form>

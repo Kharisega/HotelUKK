@@ -43,7 +43,7 @@
     <div class="d-flex" id="wrapper">
         <!-- Sidebar-->
         <div class="border-end bg-dark" id="sidebar-wrapper">
-            <div class="sidebar-heading border-bottom text-light" style="background-color: #f35587; font-weight:600; font-family:Nunito; font-size:26px">Hotel Tacenda</div>
+            <div class="sidebar-heading border-bottom text-light" style="background-color: #ffadbb; font-weight:600; font-family:Nunito; font-size:26px">Hotel Tacenda</div>
             <br>
             <div class="list-group list-group-flush">
                 @if(Auth::user()->roles[0]['name'] == 'admin')
@@ -108,6 +108,7 @@
                             @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    <img src="{{ asset('img/poto.jpg') }}" alt="" width="32" height="32" class="rounded-circle me-2">
                                     {{ Auth::user()->name }}
                                 </a>
 

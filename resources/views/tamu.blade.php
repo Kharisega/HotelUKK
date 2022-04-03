@@ -45,16 +45,7 @@
         }
 
         .navbar {
-            background: #f75959;
-            background: -moz-linear-gradient(-45deg, #f75959 0%, #f35587 100%);
-            background: -webkit-gradient(left top, right bottom, color-stop(0%, #f75959), color-stop(100%, #f35587));
-            background: -webkit-linear-gradient(-45deg, #f75959 0%, #f35587 100%);
-            background: -o-linear-gradient(-45deg, #f75959 0%, #f35587 100%);
-            background: -ms-linear-gradient(-45deg, #f75959 0%, #f35587 100%);
-            background: -webkit-linear-gradient(315deg, #f75959 0%, #f35587 100%);
-            background: -o-linear-gradient(315deg, #f75959 0%, #f35587 100%);
-            background: linear-gradient(135deg, #f75959 0%, #f35587 100%);
-            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f75959', endColorstr='#f35587', GradientType=1);
+            background-color: #490d75 !important;
         }
 
     </style>
@@ -94,6 +85,7 @@
                         @else
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <img src="{{ asset('img/poto.jpg') }}" alt="" width="32" height="32" class="rounded-circle me-2">
                                 {{ Auth::user()->name }}
                             </a>
 
@@ -131,33 +123,33 @@
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     {{-- <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg> --}}
-                    <img class="bd-placeholder-img" width="100%" height="100%" src="{{ asset('img/hotel2.jpg') }}" alt="">
+                    <img class="bd-placeholder-img" width="100%" height="100%" src="{{ asset('img/hotel5.jpg') }}" alt="">
                     <div class="container">
                         <div class="carousel-caption text-start">
-                            <h1 style="font-family: 'Palette Mosaic', cursive; color:#AFEEEE;">Be Yourself</h1>
-                            <p style="font-family: 'Palette Mosaic', cursive; color:#AFEEEE;">There's no one better.</p>
-                            {{-- <a><a class="btn btn-lg btn-primary" href="{{ route('register') }}">Daftar Sekarang!</a></a> --}}
+                            <h1 style="font-family: cursive; color:#490d75;">Be Yourself</h1>
+                            <p style="font-family: cursive; color:#490d75;">There's no one better</p>
+                            <a><a class="btn btn-lg text-white" style="background: #490d75 !important;" href="{{ route('register') }}">Daftar Sekarang!</a></a>
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item">
                     {{-- <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg> --}}
-                    <img class="bd-placeholder-img" width="100%" height="100%" src="{{ asset('img/hotel3.jpg') }}" alt="">
+                    <img class="bd-placeholder-img" width="100%" height="100%" src="{{ asset('img/lobby.jpg') }}" alt="">
                     <div class="container">
-                        <div class="carousel-caption">
-                            <h1 style="font-family: 'Palette Mosaic', cursive; color:#FF6347;">We travel not to escape life,</h1>
-                            <p style="font-family: 'Palette Mosaic', cursive; color:#FF6347;">But for life not to escape us.</p>
+                        <div class="carousel-caption text-start">
+                            <h1 style="font-family: cursive; color:#751a58;">We travel not to escape life,</h1>
+                            <p style="font-family: cursive; color:#751a58;">But for life not to escape us</p>
                             {{-- <a><a class="btn btn-lg btn-primary" href="#">Learn more</a></a> --}}
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item">
                     {{-- <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg> --}}
-                    <img class="bd-placeholder-img" width="100%" height="100%" src="{{ asset('img/hotel1.jpg') }}" alt="">
+                    <img class="bd-placeholder-img" width="100%" height="100%" src="{{ asset('img/hotel.jpg') }}" alt="">
                     <div class="container">
                         <div class="carousel-caption text-end">
-                            <h1 style="font-family: 'Palette Mosaic', cursive; color:#00FFFF;">Only you can change your life.</h1>
-                            <p style="font-family: 'Palette Mosaic', cursive; color:#00FFFF;">Nobody else can do it for you.</p>
+                            <h1 style="font-family: cursive; color:#490d75;">Only you can change your life</h1>
+                            <p style="font-family: cursive; color:#490d75;">Nobody else can do it for you</p>
                             {{-- <a><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></a> --}}
                         </div>
                     </div>
@@ -260,7 +252,7 @@
                     <img class="bd-placeholder-img" width="100%" height="100%" src="{{ asset('img/ttgkami.jpg') }}" alt="">
                 </div>
                 <div class="col-md-4">
-                    <a><a class="btn btn-secondary" href="{{ route('tamu.hotel') }}">Lihat Selengkapnya &raquo;</a></a>
+                    <a><a class="btn text-white" style="background: #490d75 !important;" href="{{ route('tamu.hotel') }}">Lihat Selengkapnya &raquo;</a></a>
                 </div>
             </div>
 
@@ -276,7 +268,7 @@
                     <img class="bd-placeholder-img" width="100%" height="100%" src="{{ asset('img/superior.jpg') }}" alt="">
                 </div>
                 <div class="col-md-2 order-md-2 offset-wae">
-                    <a><a class="btn btn-secondary" href="{{ route('tamu.superior') }}">Lihat Selengkapnya &raquo;</a></a>
+                    <a><a class="btn text-white" style="background: #490d75 !important;" href="{{ route('tamu.superior') }}">Lihat Selengkapnya &raquo;</a></a>
                 </div>
             </div>
 
@@ -292,7 +284,7 @@
                     <img class="bd-placeholder-img" width="100%" height="100%" src="{{ asset('img/deluxe.jpg') }}" alt="">
                 </div>
                 <div class="col-md-4">
-                    <a><a class="btn btn-secondary" href="{{ route('tamu.deluxe') }}">Lihat Selengkapnya &raquo;</a></a>
+                    <a><a class="btn text-white" style="background: #490d75 !important;" href="{{ route('tamu.deluxe') }}">Lihat Selengkapnya &raquo;</a></a>
                 </div>
             </div>
 
@@ -306,7 +298,7 @@
         <!-- FOOTER -->
         <footer class="container">
             <div class="float-end"><a href="#">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-arrow-up-square-fill" viewBox="0 0 16 16">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="#490d75" class="bi bi-arrow-up-square-fill" viewBox="0 0 16 16">
                         <path d="M2 16a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2zm6.5-4.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 1 0z" />
                     </svg>
                 </a></div>
