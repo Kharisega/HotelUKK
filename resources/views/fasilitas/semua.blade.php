@@ -54,6 +54,10 @@
             }
         }
 
+        .navbar {
+            background-color: #490d75 !important;
+        }
+
     </style>
 
 

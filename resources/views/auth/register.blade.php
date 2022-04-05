@@ -19,7 +19,7 @@
         <div class="row justify-content-center">
             <div class="col-md-7 col-lg-5">
                 <div class="login-wrap">
-                    <h3 class="text-center mb-4">Sign Up</h3>
+                    <h3 class="text-center mb-4">Daftar</h3>
                     <form method="POST" action="{{ route('register') }}" class="signup-form">
                         @csrf
                         <div class="form-group mb-3">
@@ -37,10 +37,11 @@
                             {{-- <span toggle="#password-confirm" class="fa fa-fw fa-eye field-icon toggle-password"></span> --}}
                         </div>
                         <div class="form-group">
-                            <button type="submit" class="form-control btn btn-primary submit px-3">Continue</button>
+                            <button type="submit" class="form-control btn btn-primary submit px-3">Daftar</button>
                         </div>
                     </form>
-                    <p>I'm already a member! <a data-toggle="tab" href="{{ route('login') }}">Sign In</a></p>
+                    <p>Sudah punya akun! <a data-toggle="tab" href="{{ route('login') }}">Masuk</a></p>
+                    <p><a data-toggle="tab" href="{{ route('welcome') }}">&#8592; Kembalip</a></p>
                 </div>
             </div>
         </div>

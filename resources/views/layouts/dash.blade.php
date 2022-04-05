@@ -118,7 +118,6 @@
                             @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    <img src="{{ asset('img/poto.jpg') }}" alt="" width="40" height="40" class="rounded-circle me-2">
                                     {{ Auth::user()->name }}
                                 </a>
 

@@ -49,6 +49,10 @@
             }
         }
 
+        .navbar {
+            background-color: #490d75 !important;
+        }
+
     </style>
 
 
@@ -67,6 +71,16 @@
                 <div class="collapse navbar-collapse .col-6 .col-md-4" id="navbarCollapse">
                     <ul class="navbar-nav me-auto mb-2 mb-md-0">
                         {{-- <ul class="navbar-nav d-flex justify-content-end"> --}}
+                        @guest
+                        <li class="nav-item">
+                            <a href="{{ route('welcome') }}" class="nav-link">{{ __('Beranda') }}</a>
+                        </li>
+                        @endguest
+                        @auth
+                        <li class="nav-item">
+                            <a href="{{ route('tamu') }}" class="nav-link">{{ __('Beranda') }}</a>
+                        </li>
+                        @endauth
                         @if (Route::has('login'))
                         @guest
                         <li class="nav-item">

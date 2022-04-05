@@ -19,9 +19,6 @@ Route::get('/', function () {
 Route::get('/lengkap', function () {
     return view('fasilitas.semua');
 })->name('lengkap');
-// Route::get('/dash', function () {
-//     return view('layouts.dash');
-// })->name('dash');
 
 
 Auth::routes();
@@ -48,12 +45,7 @@ Route::middleware('role:admin')->resource('fhotel', 'FhotelController');
 Route::middleware('role:admin')->resource('admin', 'AdminController');
 Route::middleware('role:admin')->resource('resepsionis', 'ResepsionisController');
 
-// Route::middleware('role:resepsionis','role:admin')->get('reservasi', 'ReservasiController@index')->name('reservasi.index');  
-// Route::middleware('role:resepsionis','role:admin')->post('reservasi/cari', 'ReservasiController@cari')->name('reservasi.cari');  
-// Route::middleware('role:resepsionis','role:admin')->post('reservasi/filter', 'ReservasiController@filter')->name('reservasi.filter');  
-
 //! Route khusus untuk Resepsionis
-// Route::middleware('role:resepsionis')->resource('reservasi', 'ReservasiController');
 Route::middleware('role:resepsionis')->get('reservasi', 'ReservasiController@index')->name('reservasi.index');  
 Route::middleware('role:resepsionis')->post('reservasi/cari', 'ReservasiController@cari')->name('reservasi.cari');  
 Route::middleware('role:resepsionis')->post('reservasi/filter', 'ReservasiController@filter')->name('reservasi.filter');  
