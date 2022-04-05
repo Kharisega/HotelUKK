@@ -15,11 +15,11 @@
                     <div class="col">
                         <form action="{{ route('reservasi.cari') }}" method="POST">
                             @csrf
-                            <div class="form-floating input-group">
+                            <div class="form-floating input-group satu">
                                 <input type="text" name="nama_tamu" class="form-control" id="nama_tamu">
                                 <label for="floatingInputGrid">Cari Nama Tamu / Nama Pemesan</label>
-                                <a href="{{ route('reservasi.index') }}" class="btn btn-outline-primary fs-5" style="padding-top:12px;width: 100px; height: 58px;">Semua</a>
-                                <button type="submit" class="btn btn-outline-primary fs-5" style="width: 100px; height: 58px;">Cari</button>
+                                <a href="{{ route('reservasi.index') }}" class="btn btn-outline-secondary fs-5" style="padding-top:12px;width: 100px; height: 58px;">Semua</a>
+                                <button type="submit" class="btn btn-outline-secondary fs-5" style="width: 100px; height: 58px;">Cari</button>
                             </div>
 
                         </form>
@@ -32,10 +32,10 @@
                 <div class="col">
                     <form action="{{ route('reservasi.filter') }}" method="POST">
                         @csrf
-                        <div class="form-floating input-group">
+                        <div class="form-floating input-group satu">
                             <input type="date" name="tgl_checkin" class="form-control" id="tgl_checkin">
                             <label for="floatingInputGrid">Tanggal Check In</label>
-                            <button type="submit" class="btn btn-outline-primary fs-5" style="padding-top:7px;">Cari</button>
+                            <button type="submit" class="btn btn-outline-secondary fs-5" style="padding-top:7px;">Cari</button>
                         </div>
                     </form>
                 </div>
@@ -75,7 +75,7 @@
                 @csrf
                 @method('DELETE')
 
-                <button type="submit" class="btn btn-warning">Check-Out</button>
+                <button type="submit" class="btn btn-outline-success">Checkout</button>
 
             </form>
         </td>

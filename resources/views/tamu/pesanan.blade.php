@@ -47,16 +47,7 @@
         }
 
         .navbar {
-            background: #f75959;
-            background: -moz-linear-gradient(-45deg, #f75959 0%, #f35587 100%);
-            background: -webkit-gradient(left top, right bottom, color-stop(0%, #f75959), color-stop(100%, #f35587));
-            background: -webkit-linear-gradient(-45deg, #f75959 0%, #f35587 100%);
-            background: -o-linear-gradient(-45deg, #f75959 0%, #f35587 100%);
-            background: -ms-linear-gradient(-45deg, #f75959 0%, #f35587 100%);
-            background: -webkit-linear-gradient(315deg, #f75959 0%, #f35587 100%);
-            background: -o-linear-gradient(315deg, #f75959 0%, #f35587 100%);
-            background: linear-gradient(135deg, #f75959 0%, #f35587 100%);
-            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f75959', endColorstr='#f35587', GradientType=1);
+            background-color: #490d75 !important;
         }
 
     </style>
@@ -146,14 +137,14 @@
                             <div class="col col-sm-3">    
                         <form action="{{ route('tamu.cetak', $pesanann->id_reservasi) }}" method="POST"  target="_blank">
                             @csrf
-                            <button type="submit" class="btn btn-warning">Cetak</button>
+                            <button type="submit" class="btn btn-outline-warning">Cetak</button>
                         </form>
                             </div>
                             <div class="col">
                         <form action="{{ route('tamu.destroy', $pesanann->id_reservasi) }}" method="POST">
                             @csrf
                             @method('delete')
-                            <button type="submit" class="btn btn-danger">Batal Pesanan</button>
+                            <button type="submit" class="btn btn-outline-danger">Batal Pesanan</button>
                         </form>
                             </div>
                         </div>
@@ -163,7 +154,7 @@
                 @endforeach
             </table>
 
-            <hr class="featurette-divider">
+            <hr class="featurette-divider" style="margin-bottom:10px !important;">
         </div>
 
 

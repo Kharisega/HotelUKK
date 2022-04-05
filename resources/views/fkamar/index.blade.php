@@ -8,7 +8,7 @@
                 <h2>Data Fasilitas Kamar</h2>
             </div>
             <div class="pull-right mt-4 mb-4">
-                <a href="{{ route('fkamar.create') }}" class="btn btn-success">Tambah Data</a>
+                <a href="{{ route('fkamar.create') }}" class="btn btn-outline-warning">Tambah Data</a>
             </div>
         </div>
     </div>
@@ -37,12 +37,12 @@
             <td><img src="{{url('/fasilitas_kamarkcl/') . '/' . $fkamarr->gambar}}" alt="{{ $fkamarr->gambar }}"></td>
             <td>
                 <form action="{{ route('fkamar.destroy', $fkamarr->id_fasilitas) }}" method="POST">
-                    <a href="{{ route('fkamar.edit',$fkamarr->id_fasilitas) }}" class="btn btn-primary">Edit</a>
+                    <a href="{{ route('fkamar.edit',$fkamarr->id_fasilitas) }}" class="btn btn-outline-success">Edit</a>
 
                     @csrf
                     @method('DELETE')
 
-                    <button type="submit" class="btn btn-danger">Hapus</button>
+                    <button type="submit" class="btn btn-outline-danger">Hapus</button>
 
                 </form>
             </td>

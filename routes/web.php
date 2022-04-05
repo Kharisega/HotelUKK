@@ -19,12 +19,15 @@ Route::get('/', function () {
 Route::get('/lengkap', function () {
     return view('fasilitas.semua');
 })->name('lengkap');
+// Route::get('/dash', function () {
+//     return view('layouts.dash');
+// })->name('dash');
 
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-// Route::get('/testing', 'CobaController@index')->name('testing');
+Route::get('/dash', 'CobaController@index')->name('dash');
 Route::middleware('auth')->get('/tamu', 'TamuController@index')->name('tamu');
 Route::post('/tamu/pesan', 'TamuController@pesan')->name('tamu.pesan');
 Route::get('/tamu/pesanan', 'TamuController@pesanan')->name('tamu.pesanan');
