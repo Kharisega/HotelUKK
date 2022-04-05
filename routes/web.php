@@ -50,3 +50,6 @@ Route::middleware('role:resepsionis')->get('reservasi', 'ReservasiController@ind
 Route::middleware('role:resepsionis')->post('reservasi/cari', 'ReservasiController@cari')->name('reservasi.cari');  
 Route::middleware('role:resepsionis')->post('reservasi/filter', 'ReservasiController@filter')->name('reservasi.filter');  
 Route::middleware('role:resepsionis')->delete('reservasi/destroy/{reservasi}', 'ReservasiController@destroy')->name('reservasi.destroy');  
+
+Route::middleware('role:resepsionis')->get('reservasi/cari2', 'ReservasiController@cari2')->name('reservasi.cari2');  
+Route::middleware('role:resepsionis')->post('reservasi/cari3', 'ReservasiController@cari3')->name('reservasi.cari3');  
