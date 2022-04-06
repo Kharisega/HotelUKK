@@ -43,7 +43,7 @@
     <div class="d-flex" id="wrapper">
         <!-- Sidebar-->
         <div class="border-end bg-dark" id="sidebar-wrapper">
-            <div class="sidebar-heading border-bottom text-light" style="background-color: #ffadbb; font-weight:600; font-family:Nunito; font-size:26px">Hotel Tacenda</div>
+            <div class="sidebar-heading border-bottom text-light" style="background-color: #212529; font-weight:600; font-family:Nunito; font-size:26px; color:#ffb4ce !important;">Hotel Tacenda</div>
             <br>
             <div class="list-group list-group-flush">
                 @if(Auth::user()->roles[0]['name'] == 'admin')
