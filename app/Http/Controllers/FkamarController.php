@@ -16,7 +16,8 @@ class FkamarController extends Controller
     public function index()
     {
         $fkamar = Fkamar::latest()->paginate(5);
-        return view('fkamar.index', compact('fkamar'));
+        $halaman = Fkamar::latest()->paginate(5)->currentPage();
+        return view('fkamar.index', compact('fkamar', 'halaman'));
     }
 
     /**
@@ -99,7 +100,35 @@ class FkamarController extends Controller
         $request->validate([
             'nama_fasilitas'=>'required',
         ]);
-        $fkamar->update($request->all());
+
+        if ($request->gambar != null ) {
+            $namegambar = $request->file('gambar');
+            $gambar = $request->file('gambar')->getClientOriginalName();
+
+            $thumbgambar = Image::make($namegambar->getRealPath())->resize(85, 85);
+            $thumbPath = public_path() . '/fasilitas_kamarkcl/' . $gambar;
+            $thumbgambar = Image::make($thumbgambar)->save($thumbPath);
+
+            $oriGambar = Image::make($namegambar->getRealPath());
+            $oriPath = public_path() . '/fasilitas_kamar/' . $gambar;
+            $oriImage = Image::make($oriGambar)->save($oriPath);
+    
+    
+            $fkamar->update([
+                'nama_fasilitas' => $request['nama_fasilitas'],
+                'gambar' => $gambar,
+                'tipe_kamar' => $request['tipe_kamar'],
+            ]);
+    
+            return redirect()->route('fkamar.index')->with('success', "Data Fasilitas Kamar berhasil diubah");
+        }
+
+        $update = DB::table('fasilitaskmr')
+              ->where('id_fasilitas', $request->id_fasilitas)
+              ->update([
+                  'nama_fasilitas' => $request->nama_fasilitas,
+                  'tipe_kamar' => $request->tipe_kamar,
+              ]);
         return redirect()->route('fkamar.index')->with('success', "Data Fasilitas Kamar berhasil diubah");
     }
 

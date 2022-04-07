@@ -28,8 +28,13 @@
             <th>Gambar</th>
             <th>Aksi</th>
         </tr>
+        @php
+            $a = 5 * $halaman;
+            $b = 5 * ( $halaman - 1 );
+        @endphp
         @foreach ($fkamar as $i => $fkamarr)
         <tr>
+            <td>@if($halaman > 1) {{ ++$b }} @else {{ ++$i }} @endif</td>
             <td>{{ ++$i }}</td>
             <td>{{ $fkamarr->id_fasilitas }}</td>
             <td>{{ $fkamarr->nama_fasilitas }}</td>

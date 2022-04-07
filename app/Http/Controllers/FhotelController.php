@@ -103,7 +103,36 @@ class FhotelController extends Controller
             'nama_fasilitas'=>'required',
             'keterangan'=>'required',
         ]);
-        $fhotel->update($request->all());
+
+        if ($request->gambar != null ) {
+        $namegambar = $request->file('gambar');
+        $gambar = $request->file('gambar')->getClientOriginalName();
+
+        $thumbgambar = Image::make($namegambar->getRealPath())->resize(85, 85);
+        $thumbPath = public_path() . '/fasilitas_hotelkcl/' . $gambar;
+        $thumbgambar = Image::make($thumbgambar)->save($thumbPath);
+
+        $oriGambar = Image::make($namegambar->getRealPath());
+        $oriPath = public_path() . '/fasilitas_hotel/' . $gambar;
+        $oriImage = Image::make($oriGambar)->save($oriPath);
+
+
+        $fhotel->update([
+            'nama_fasilitas' => $request['nama_fasilitas'],
+            'gambar' => $gambar,
+            'keterangan' => $request['keterangan'],
+        ]);
+
+        return redirect()->route('fhotel.index')->with('success', "Data Fasilitas Hotel berhasil diubah");
+    }
+
+        $update = DB::table('fasilitashtl')
+              ->where('id_fasilitas', $request->id_fasilitas)
+              ->update([
+                  'nama_fasilitas' => $request->nama_fasilitas,
+                  'keterangan' => $request->keterangan,
+              ]);
+
         return redirect()->route('fhotel.index')->with('success', "Data Fasilitas Hotel berhasil diubah");
     }
 

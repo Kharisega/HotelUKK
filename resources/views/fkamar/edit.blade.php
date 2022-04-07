@@ -46,7 +46,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <label for="gambar">Gambar / Foto :</label>
-                    <input type="file" name="gambar" value="{{ old('gambar', $fhotel->gambar) }}" class="form-control" id="gambar">
+                    <input type="file" name="gambar" value="{{ old('gambar', $fkamar->gambar) }}" class="form-control" id="gambar">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
