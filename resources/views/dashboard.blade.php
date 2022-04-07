@@ -37,6 +37,8 @@
             width: max-content;
         }
 
+        
+
     </style>
 </head>
 <body>

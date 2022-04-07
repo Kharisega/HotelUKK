@@ -23,6 +23,7 @@ class CreateReservasiTable extends Migration
             $table->string('tipe_kamar');
             $table->string('notelp_tamu');
             $table->string('email');
+            $table->string('status');
             $table->timestamps();
         });
     }

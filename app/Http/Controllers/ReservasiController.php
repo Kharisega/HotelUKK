@@ -70,18 +70,21 @@ class ReservasiController extends Controller
     public function checkin($id_reservasi)
     {
         $ganti = DB::table('reservasi')->where('id_reservasi', $id_reservasi)->update([ 'status' => 'checkout' ]);
-        return redirect()->route('reservasi.indexin')->with('success', 'Pesanan sudah berhasil Check-In!');
+        Alert::toast('Pesanan sudah berhasil Check-In!', 'success');
+        return redirect()->route('reservasi.index');
     }
 
     public function checkout($id_reservasi)
     {
         $ganti = DB::table('reservasi')->where('id_reservasi', $id_reservasi)->update([ 'status' => 'selesai' ]);
-        return redirect()->route('reservasi.indexout')->with('success', 'Pesanan sudah berhasil Check-Out!');
+        Alert::toast('Pesanan sudah berhasil Check-Out!', 'success');
+        return redirect()->route('reservasi.index');
     }
 
-    public function destroy($reservasi)
+    public function batal($reservasi)
     {
-        $ganti = DB::table('reservasi')->where('id_reservasi', $id_reservasi)->update([ 'status' => 'batal' ]);
-        return redirect()->route('reservasi.indexbatal')->with('success', 'Pesanan sudah berhasil dibatalkan!');
+        $ganti = DB::table('reservasi')->where('id_reservasi', $reservasi)->update([ 'status' => 'batal' ]);
+        Alert::toast('Pesanan sudah berhasil Dibatalkan!', 'success');
+        return redirect()->route('reservasi.index');
     }
 }

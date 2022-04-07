@@ -39,7 +39,8 @@
         </div>
     </div>
     <br>
-    <table class="table table-bordered">
+    <table class="table table-sm table-hover table-striped table-responsive">
+        <thead class="thead-dark">
         <tr>
             <th>No</th>
             <th>ID Reservasi</th>
@@ -54,6 +55,7 @@
             <th>Status</th>
             <th>Aksi</th>
         </tr>
+        </thead>
         @foreach ($reservasi as $i => $reservasii)
         <tr>
             <td>{{ ++$i }}</td>
@@ -66,15 +68,34 @@
             <td>{{ $reservasii->tipe_kamar }}</td>
             <td>{{ $reservasii->notelp_tamu }}</td>
             <td>{{ $reservasii->email }}</td>
-            <td>{{ $reservasii->status }}</td>
             @if( $reservasii->status == 'checkin' )
-                <td>ijo</td>
+            <td>Belum Check-In</td>
+            <td>
+                <form action="{{ route('reservasi.batal', $reservasii->id_reservasi) }}" method="POST">
+                    <a href="{{ route('reservasi.checkin',$reservasii->id_reservasi) }}" class="btn btn-outline-success">CheckIn</a>
+
+                    @csrf
+                    <button type="submit" class="btn btn-outline-danger">Batal</button>
+
+                </form>
+            </td>
             @elseif( $reservasii->status == 'checkout' )
-                <td>biru</td>
-            @elseif( $reservasii->status == 'batal' )
-                <td>merah</td>
+            <td>Sudah Check-In</td>
+            <td>
+                <form action="{{ route('reservasi.batal', $reservasii->id_reservasi) }}" method="POST">
+                    <a href="{{ route('reservasi.checkout',$reservasii->id_reservasi) }}" class="btn btn-outline-success">CheckOut</a>
+
+                    @csrf
+                    <button type="submit" class="btn btn-outline-danger">Batal</button>
+
+                </form>
+            </td>
+            @elseif ( $reservasii->status == 'selesai' )
+            <td>Pesanan sudah selesai</td>
+            <td></td>
             @else
-                {{-- kosong --}}
+            <td>Pesanan dibatalkan</td>
+            <td></td>
             @endif
             {{-- <td>
                 <form action="{{ route('reservasi.destroy', $reservasii->id_reservasi) }}" method="POST">
