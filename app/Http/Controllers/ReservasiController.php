@@ -14,6 +14,21 @@ class ReservasiController extends Controller
         $reservasi = Reservasi::paginate(10);
         return view('reservasi.index', compact('reservasi'));
     }
+    public function indexin()
+    {
+        $reservasi = Reservasi::where('status', 'checkin')->paginate(10);
+        return view('reservasi.index', compact('reservasi'));
+    }
+    public function indexout()
+    {
+        $reservasi = Reservasi::where('status', 'checkout')->paginate(10);
+        return view('reservasi.index', compact('reservasi'));
+    }
+    public function indexbatal()
+    {
+        $reservasi = Reservasi::where('status', 'batal')->paginate(10);
+        return view('reservasi.index', compact('reservasi'));
+    }
 
     public function cari(Request $request)
     {
@@ -52,9 +67,21 @@ class ReservasiController extends Controller
         }
     }
 
-    public function destroy(Reservasi $reservasi)
+    public function checkin($id_reservasi)
     {
-        $reservasi->delete();
-        return redirect()->route('reservasi.index')->with('success', 'Pesanan sudah berhasil Check-Out!');
+        $ganti = DB::table('reservasi')->where('id_reservasi', $id_reservasi)->update([ 'status' => 'checkout' ]);
+        return redirect()->route('reservasi.indexin')->with('success', 'Pesanan sudah berhasil Check-In!');
+    }
+
+    public function checkout($id_reservasi)
+    {
+        $ganti = DB::table('reservasi')->where('id_reservasi', $id_reservasi)->update([ 'status' => 'selesai' ]);
+        return redirect()->route('reservasi.indexout')->with('success', 'Pesanan sudah berhasil Check-Out!');
+    }
+
+    public function destroy($reservasi)
+    {
+        $ganti = DB::table('reservasi')->where('id_reservasi', $id_reservasi)->update([ 'status' => 'batal' ]);
+        return redirect()->route('reservasi.indexbatal')->with('success', 'Pesanan sudah berhasil dibatalkan!');
     }
 }

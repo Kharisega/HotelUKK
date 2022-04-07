@@ -76,6 +76,7 @@ class TamuController extends Controller
             'tipe_kamar'=> $request->tipe_kamar,
             'notelp_tamu'=> $request->notelp,
             'email'=> $request->email,
+            'status'=> 'checkin',
         ]);
 
         // Alert::success('Sukses', 'Pemesanan Kamar anda sudah berhasil diproses!');
@@ -101,6 +102,7 @@ class TamuController extends Controller
         // dd($cetak);
         return view('tamu.cetak', compact('cetak'));
     }
+
     public function destroy(Reservasi $reservasi)
     {
         $reservasi->delete();

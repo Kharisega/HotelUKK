@@ -51,7 +51,6 @@
             <th>Tipe Kamar</th>
             <th>Nomor Telepon Pemesan</th>
             <th>E-mail</th>
-            <th>Status</th>
             <th>Aksi</th>
         </tr>
         @foreach ($reservasi as $i => $reservasii)
@@ -66,17 +65,7 @@
             <td>{{ $reservasii->tipe_kamar }}</td>
             <td>{{ $reservasii->notelp_tamu }}</td>
             <td>{{ $reservasii->email }}</td>
-            <td>{{ $reservasii->status }}</td>
-            @if( $reservasii->status == 'checkin' )
-                <td>ijo</td>
-            @elseif( $reservasii->status == 'checkout' )
-                <td>biru</td>
-            @elseif( $reservasii->status == 'batal' )
-                <td>merah</td>
-            @else
-                {{-- kosong --}}
-            @endif
-            {{-- <td>
+            <td>
                 <form action="{{ route('reservasi.destroy', $reservasii->id_reservasi) }}" method="POST">
                     @csrf
                     @method('DELETE')
@@ -84,7 +73,7 @@
                     <button type="submit" class="btn btn-outline-success">Checkout</button>
 
                 </form>
-            </td> --}}
+            </td>
         </tr>
         @endforeach
     </table>
