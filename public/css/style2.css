@@ -10718,14 +10718,14 @@ h5,
     -moz-box-shadow: 0px 10px 34px -15px rgba(0, 0, 0, 0.24);
     box-shadow: 0px 10px 34px -15px rgba(0, 0, 0, 0.24);
     z-index: 0;
-    padding: 100px 30px 30px 30px;
+    padding: 27px 30px 30px 30px;
 }
 .login-wrap:after {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    height: 100px;
+    height: 75px;
     content: "";
     background: #f75959;
     background: -moz-linear-gradient(-45deg, #f75959 0%, #f35587 100%);

@@ -19,7 +19,7 @@
         <div class="row justify-content-center">
             <div class="col-md-7 col-lg-5">
                 <div class="login-wrap">
-                    <h3 class="text-center mb-4">Daftar</h3>
+                    <h3 class="text-center text-white mb-4">Daftar</h3>
                     <form method="POST" action="{{ route('register') }}" class="signup-form">
                         @csrf
                         <div class="form-group mb-3">
@@ -41,7 +41,7 @@
                         </div>
                     </form>
                     <p>Sudah punya akun! <a data-toggle="tab" href="{{ route('login') }}">Masuk</a></p>
-                    <p><a data-toggle="tab" href="{{ route('welcome') }}">&#8592; Kembalip</a></p>
+                    <p><a data-toggle="tab" href="{{ route('welcome') }}">&#8592; Kembali</a></p>
                 </div>
             </div>
         </div>

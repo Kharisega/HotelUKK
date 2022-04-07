@@ -46,7 +46,10 @@ Route::middleware('role:admin')->resource('admin', 'AdminController');
 Route::middleware('role:admin')->resource('resepsionis', 'ResepsionisController');
 
 //! Route khusus untuk Resepsionis
-Route::middleware('role:resepsionis')->get('reservasi', 'ReservasiController@index')->name('reservasi.index');  
+// Route::middleware('role:resepsionis')->get('reservasi', 'ReservasiController@index')->name('reservasi.index');  
 Route::middleware('role:resepsionis')->post('reservasi/cari', 'ReservasiController@cari')->name('reservasi.cari');  
 Route::middleware('role:resepsionis')->post('reservasi/filter', 'ReservasiController@filter')->name('reservasi.filter');  
 Route::middleware('role:resepsionis')->delete('reservasi/destroy/{reservasi}', 'ReservasiController@destroy')->name('reservasi.destroy');  
+
+Route::middleware('role:resepsionis')->get('reservasi', 'ReservasiController@index')->name('reservasi.index');  
+Route::middleware('role:resepsionis')->post('reservasi/cari', 'ReservasiController@cari')->name('reservasi.cari');  
