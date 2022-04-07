@@ -34,10 +34,12 @@ class TamuController extends Controller
 
         $super = DB::table('reservasi')
         ->where('tipe_kamar', 'superior')
+        ->where('status', 'checkout')
         ->get();
 
         $delux = DB::table('reservasi')
         ->where('tipe_kamar', 'deluxe')
+        ->where('status', 'checkout')
         ->get();
 
         $jml_super = $superiorawal;

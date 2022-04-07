@@ -49,7 +49,9 @@ Route::middleware('role:admin')->resource('resepsionis', 'ResepsionisController'
 // Route::middleware('role:resepsionis')->get('reservasi', 'ReservasiController@index')->name('reservasi.index');  
 Route::middleware('role:resepsionis')->post('reservasi/cari', 'ReservasiController@cari')->name('reservasi.cari');  
 Route::middleware('role:resepsionis')->post('reservasi/filter', 'ReservasiController@filter')->name('reservasi.filter');  
-Route::middleware('role:resepsionis')->delete('reservasi/destroy/{reservasi}', 'ReservasiController@destroy')->name('reservasi.destroy');  
+Route::middleware('role:resepsionis')->post('reservasi/batal/{reservasi}', 'ReservasiController@batal')->name('reservasi.batal');  
+Route::middleware('role:resepsionis')->get('reservasi/checkin/{id_reservasi}', 'ReservasiController@checkin')->name('reservasi.checkin');  
+Route::middleware('role:resepsionis')->get('reservasi/checkout/{id_reservasi}', 'ReservasiController@checkout')->name('reservasi.checkout');  
 
 Route::middleware('role:resepsionis')->get('reservasi', 'ReservasiController@index')->name('reservasi.index');  
 Route::middleware('role:resepsionis')->post('reservasi/cari', 'ReservasiController@cari')->name('reservasi.cari');  
