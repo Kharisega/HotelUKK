@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 05, 2022 at 10:07 AM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.6
+-- Generation Time: Apr 07, 2022 at 03:17 AM
+-- Server version: 10.4.22-MariaDB
+-- PHP Version: 7.4.27
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -71,8 +71,12 @@ CREATE TABLE `fasilitashtl` (
 --
 
 INSERT INTO `fasilitashtl` (`id_fasilitas`, `nama_fasilitas`, `gambar`, `keterangan`, `created_at`, `updated_at`) VALUES
-(1, 'Kolam Api', 'kolam.jpg', 'Lantai 3 Bawah Tanah', '2022-03-23 20:53:32', '2022-03-23 20:53:32'),
-(2, 'Coffee Maker', 'pexels-suhel-vba-3659683.jpg', 'Keadaan Normal', '2022-03-24 19:26:06', '2022-03-24 19:26:06');
+(1, 'Kolam Renang', 'kolam.jpg', 'Berada di lantai 3 dengan luas 50m persegi', '2022-04-06 06:56:06', '2022-04-06 06:56:06'),
+(2, 'Food Court', 'foodcourt.jpg', 'Berada di lantai bawah dan buka selama 24 jam', '2022-04-06 06:57:55', '2022-04-06 06:57:55'),
+(3, 'Parkir Mobil dan Motor', 'parkir.jpg', 'Parkiran yang luas yang berada di bawah tanah', '2022-04-06 07:01:58', '2022-04-06 07:01:58'),
+(4, 'Playground', 'playground.jpg', 'Berada di lantai 1 khusus untuk anak berusia di bawah 15 tahun', '2022-04-06 07:05:56', '2022-04-06 07:05:56'),
+(5, 'Lapangan Tenis', 'tenis.jpg', 'Berada di lantai 1 dengan perlengkapan tenis yang lengkap dan bisa digunakan', '2022-04-06 07:07:10', '2022-04-06 07:07:10'),
+(6, 'Pemancingan', 'pemancingan.jpg', 'Tersedia tempat pemancingan dan disediakan transportasi untuk menuju lokasi', '2022-04-06 07:08:14', '2022-04-06 07:08:14');
 
 -- --------------------------------------------------------
 
@@ -267,6 +271,16 @@ CREATE TABLE `reservasi` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `reservasi`
+--
+
+INSERT INTO `reservasi` (`id_reservasi`, `tgl_checkin`, `tgl_checkout`, `jumlah_kamar`, `nama_pemesan`, `nama_tamu`, `tipe_kamar`, `notelp_tamu`, `email`, `created_at`, `updated_at`) VALUES
+(8, '2022-04-05', '2022-04-06', 2, 'Delila', 'Sandy', 'superior', '0895632029515', 'delila@gmail.com', '2022-04-05 07:45:49', '2022-04-05 07:45:49'),
+(9, '2022-04-21', '2022-04-22', 4, 'Delila', 'Komang', 'deluxe', '0895632029515', 'delila@gmail.com', '2022-04-05 07:46:20', '2022-04-05 07:46:20'),
+(10, '2022-04-13', '2022-04-14', 3, 'Delila', 'Sandy', 'superior', '0895632029515', 'delila@gmail.com', '2022-04-05 07:46:42', '2022-04-05 07:46:42'),
+(11, '2022-04-08', '2022-04-09', 3, 'Delila', 'Ega', 'deluxe', '0895632029515', 'delila@gmail.com', '2022-04-05 08:01:37', '2022-04-05 08:01:37');
 
 -- --------------------------------------------------------
 
@@ -472,7 +486,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `fasilitashtl`
 --
 ALTER TABLE `fasilitashtl`
-  MODIFY `id_fasilitas` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_fasilitas` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `fasilitaskmr`
@@ -508,7 +522,7 @@ ALTER TABLE `resepsionis`
 -- AUTO_INCREMENT for table `reservasi`
 --
 ALTER TABLE `reservasi`
-  MODIFY `id_reservasi` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_reservasi` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `roles`
