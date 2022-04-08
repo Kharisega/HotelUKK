@@ -35,7 +35,6 @@
         @foreach ($fkamar as $i => $fkamarr)
         <tr>
             <td>@if($halaman > 1) {{ ++$b }} @else {{ ++$i }} @endif</td>
-            <td>{{ ++$i }}</td>
             <td>{{ $fkamarr->id_fasilitas }}</td>
             <td>{{ $fkamarr->nama_fasilitas }}</td>
             <td>{{ $fkamarr->tipe_kamar }}</td>

@@ -83,7 +83,7 @@
             <td>Sudah Check-In</td>
             <td>
                 <form action="{{ route('reservasi.batal', $reservasii->id_reservasi) }}" method="POST">
-                    <a href="{{ route('reservasi.checkout',$reservasii->id_reservasi) }}" class="btn btn-outline-success">CheckOut</a>
+                    <a href="{{ route('reservasi.checkout',$reservasii->id_reservasi) }}" class="btn btn-outline-warning">CheckOut</a>
 
                     @csrf
                     <button type="submit" class="btn btn-outline-danger">Batal</button>
